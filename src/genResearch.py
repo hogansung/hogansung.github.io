@@ -1,7 +1,7 @@
 import os
 
 
-target_file = '../webpages/research.html'
+target_file = '../research.html'
 target_folder = '../research/'
 
 default_readme = '../research/template/readme.txt'
@@ -20,11 +20,11 @@ def getPrefix():
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Bootstrap core CSS -->
-        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 
         <!-- Bootstrap social CSS -->
-        <link href="../bootstrap-social/bootstrap-social.css" rel="stylesheet">
-        <link href="../bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+        <link href="bootstrap-social/bootstrap-social.css" rel="stylesheet">
+        <link href="bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
     </head>
 
     <body style="background-color: rgba(240, 250, 240, 0.3)">
@@ -66,8 +66,8 @@ def getSuffix():
         <!-- Bootstrap core JavaScript
             ================================================== -->
             <!-- Placed at the end of the document so the pages load faster -->
-            <script src="../jquery/jquery-1.11.3.min.js"></script>
-            <script src="../bootstrap/js/bootstrap.js"></script>
+            <script src="jquery/jquery-1.11.3.min.js"></script>
+            <script src="bootstrap/js/bootstrap.js"></script>
         </div>
     </body>
 </html>'''
@@ -103,19 +103,20 @@ def getContent():
         with open(readmePath) as f:
             t, st, cnt = [line.strip() for line in f.readlines()]
 
+        # hack: delete "../" for href
         s += '''
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-3">
-                    <a target="_blank" href="''' + reportPath + '''">
-                        <img class="img-responsive" src="''' + imagePath + '''" alt="Image missing">
+                    <a target="_blank" href="''' + reportPath[3:] + '''">
+                        <img class="img-responsive" src="''' + imagePath[3:] + '''" alt="Image missing">
                     </a>
                 </div>
                 <div class="col-md-7">
                     <h4> ''' + t + ''' </h4>
                     <h5> <i> ''' + st + ''' </i> </h5>
                     <p> ''' + cnt + ''' </p>
-                    <a target="_blank" class="btn btn-primary" href="''' + reportPath + '''"> 
+                    <a target="_blank" class="btn btn-primary" href="''' + reportPath[3:] + '''"> 
                         Get the Report
                         <span class="glyphicon glyphicon-chevron-right"> 
                         </span>
@@ -123,7 +124,7 @@ def getContent():
 '''
 
         if os.path.isfile(os.path.join(projName, 'source.zip')):
-            s += '''                    <a class="btn btn-primary" target="_blank" href="''' + os.path.join(projName, 'source.zip') + '''"> 
+            s += '''                    <a class="btn btn-primary" target="_blank" href="''' + os.path.join(projName[3:] , 'source.zip') + '''"> 
                         Get the Source
                         <span class="glyphicon glyphicon-chevron-right"> 
                         </span>
@@ -146,7 +147,7 @@ def main():
     suffix = getSuffix()
     content = getContent()
 
-    with open('../webpages/research.html', 'w') as f:
+    with open(target_file, 'w') as f:
         f.write(prefix + content + suffix)
 
 

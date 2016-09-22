@@ -4,7 +4,7 @@ import re
 import hashlib
 
 
-target_file = '../webpages/blog.html'
+target_file = '../blog.html'
 target_folder = '../blog/'
 PREVIEW_LIMIT = 200
 
@@ -12,11 +12,11 @@ PREVIEW_LIMIT = 200
 
 
 def cleanArticle():
-    fileNames = os.listdir('../webpages/')
+    fileNames = os.listdir('../article-pages/')
     articleNames = filter(lambda x: x.find('article') >= 0, fileNames)
 
     for articleName in articleNames:
-        os.remove(os.path.join('../webpages/', articleName))
+        os.remove(os.path.join('../article-pages/', articleName))
 
 
 def getPrefix():
@@ -30,11 +30,11 @@ def getPrefix():
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Bootstrap core CSS -->
-        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 
         <!-- Bootstrap social CSS -->
-        <link href="../bootstrap-social/bootstrap-social.css" rel="stylesheet">
-        <link href="../bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+        <link href="bootstrap-social/bootstrap-social.css" rel="stylesheet">
+        <link href="bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
     </head>
 
     <body style="background-color: rgba(240, 250, 240, 0.3)">
@@ -67,7 +67,70 @@ def getPrefix():
     return s
 
 
+
+def getPrefix_article():
+    s = '''<!DOCTYPE html>
+
+<html lang="en" class="normal-full">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap core CSS -->
+        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Bootstrap social CSS -->
+        <link href="../bootstrap-social/bootstrap-social.css" rel="stylesheet">
+        <link href="../bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+    </head>
+
+    <body style="background-color: rgba(240, 250, 240, 0.3)">
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="../index.html">Hao-en Sung (Hogan)</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../home.html">HOME</a></li>
+                        <li class="active"><a href="../blog.html">BLOG</a></li>
+                        <li><a href="../research.html">RESEARCH</a></li>
+                        <li><a href="../about.html">ABOUT</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="container">
+'''
+    return s
+
+
+
 def getSuffix():
+    s = '''        </div>
+
+        <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="jquery/jquery-1.11.3.min.js"></script>
+            <script src="bootstrap/js/bootstrap.js"></script>
+    </body>
+</html>'''
+    return s
+
+
+def getSuffix_article():
     s = '''        </div>
 
         <!-- Bootstrap core JavaScript
@@ -112,7 +175,7 @@ def getContent(prefix, suffix):
         
         # create article hash
         articleHash = hashlib.md5(open(articlePath, 'rb').read()).hexdigest()
-        target_site = os.path.join('../webpages/', 'article_'+ articleHash + '.html')
+        target_site = os.path.join('../article-pages/', 'article_'+ articleHash + '.html')
 
         # for blog content
         s += '''
@@ -125,8 +188,9 @@ def getContent(prefix, suffix):
         if len(gs) > PREVIEW_LIMIT:
             s += '...'
 
+        # hack: delete "../" for href
         s += '''
-                        <a href="''' + target_site + '''"> (Read More) </a>
+                        <a href="''' + target_site[3:] + '''"> (Read More) </a>
                     </p>
                 </div>
             </div>
@@ -172,11 +236,13 @@ def getContent(prefix, suffix):
 def main():
     cleanArticle()
 
+    prefix_article = getPrefix_article()
+    suffix_article = getSuffix_article()
+    content = getContent(prefix_article, suffix_article)
+
     prefix = getPrefix()
     suffix = getSuffix()
-    content = getContent(prefix, suffix)
-
-    with open('../webpages/blog.html', 'w') as f:
+    with open(target_file, 'w') as f:
         f.write(prefix + content + suffix)
 
 
