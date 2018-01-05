@@ -5,10 +5,10 @@ from wand.color import Color
 
 
 def main():
-    path = '../research'
+    path = '../project'
 
     fds = os.listdir(path)
-    fds = filter(lambda x: x[0].isupper(), fds)
+    fds = filter(lambda x: x[0].isdigit(), fds)
 
     for fd in fds:
         f = os.path.join(path, fd, 'report.pdf')

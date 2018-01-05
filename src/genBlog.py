@@ -56,6 +56,7 @@ def getPrefix():
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="home.html">HOME</a></li>
                         <li class="active"><a href="blog.html">BLOG</a></li>
+                        <li><a href="project.html">PROJECT</a></li>
                         <li><a href="research.html">RESEARCH</a></li>
                         <li><a href="about.html">ABOUT</a></li>
                     </ul>
@@ -105,6 +106,7 @@ def getPrefix_article():
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="../home.html">HOME</a></li>
                         <li class="active"><a href="../blog.html">BLOG</a></li>
+                        <li><a href="../project.html">PROJECT</a></li>
                         <li><a href="../research.html">RESEARCH</a></li>
                         <li><a href="../about.html">ABOUT</a></li>
                     </ul>
@@ -154,6 +156,7 @@ def getContent(prefix, suffix):
 '''
 
     folderNames = os.listdir(target_folder)
+    folderNames = filter(lambda x: x[0] != '.', folderNames)
 
     for folderName in folderNames:
         projName = os.path.join(target_folder, folderName)
