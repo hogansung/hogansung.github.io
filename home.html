@@ -21,12 +21,6 @@
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">Hao-en Sung (Hogan)</a>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,7 +28,13 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="home.html">HOME</a></li>
                         <li><a href="blog.html">BLOG</a></li>
-                        <li><a href="project.html">PROJECT</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="project_undergrad.html">Undergrad Project</a></li>
+                              <li><a href="project_graduate.html">Graduate Project</a></li>
+                            </ul>
+                        </li>
                         <li><a href="research.html">RESEARCH</a></li>
                         <li><a href="about.html">ABOUT</a></li>
                     </ul>
@@ -58,7 +58,8 @@
                         <li> <a href="index.html"><strong> index </strong></a> </li>
                         <li> <a href="home.html"><strong> home </strong></a> </li>
                         <li> <a href="blog.html"><strong> blog </strong></a> </li>
-                        <li> <a href="project.html"> project </a></li>
+                        <li> <a href="project_undergrad.html"><strong> undergrad project </strong></a></li>
+                        <li> <a href="project_graduate.html"><strong> graduate project </strong></a></li>
                         <li> <a href="research.html"><strong> research </strong></a> </li>
                         <li> <a href="about.html"><strong> about </strong></a> </li>
                     </ul> </p>
@@ -80,3 +81,14 @@
                     <p> Version 1.1 (2016-09-22): update <a href="about.html"><strong> about </strong></a> page, including adding two pulications, modifying statements, showing percentage in skills, and renewing social links; update <a href="home.html"><strong> home </strong></a> page: adding Edit History block </p>
                     <p> Version 1.2 (2017-06-21): update publications; update intern experience (Yelp); update school GPA </p>
                     <p> Version 2.0 (2018-01-04): update thumbnails for each project: use MagickWand to extract the first page of every pdf file and transfer them from pdf format into png format </p> 
+                </div>
+            </div>
+
+        <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="jquery/jquery-1.11.3.min.js"></script>
+            <script src="bootstrap/js/bootstrap.js"></script>
+        </div>
+    </body>
+</html>

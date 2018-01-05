@@ -43,12 +43,6 @@ def getPrefix():
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">Hao-en Sung (Hogan)</a>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,7 +50,13 @@ def getPrefix():
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="home.html">HOME</a></li>
                         <li class="active"><a href="blog.html">BLOG</a></li>
-                        <li><a href="project.html">PROJECT</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="project_undergrad.html">Undergrad Project</a></li>
+                              <li><a href="project_graduate.html">Graduate Project</a></li>
+                            </ul>
+                        </li>
                         <li><a href="research.html">RESEARCH</a></li>
                         <li><a href="about.html">ABOUT</a></li>
                     </ul>
@@ -93,12 +93,6 @@ def getPrefix_article():
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="../index.html">Hao-en Sung (Hogan)</a>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -106,7 +100,13 @@ def getPrefix_article():
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="../home.html">HOME</a></li>
                         <li class="active"><a href="../blog.html">BLOG</a></li>
-                        <li><a href="../project.html">PROJECT</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="project_undergrad.html">Undergrad Project</a></li>
+                              <li><a href="project_graduate.html">Graduate Project</a></li>
+                            </ul>
+                        </li>
                         <li><a href="../research.html">RESEARCH</a></li>
                         <li><a href="../about.html">ABOUT</a></li>
                     </ul>

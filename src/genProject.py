@@ -1,8 +1,19 @@
 import os
+import pathlib
 
 
-target_file = '../project.html'
-target_folder = '../project/'
+targets = {
+    'Undergrad Project': {
+        'target_file': '../project_undergrad.html',
+        'target_folder': '../project/undergrad',
+        'target_sub_folders': ['Freshman', 'Sophomore', 'Junior', 'Senior'],
+    },
+    'Graduate Project': {
+        'target_file': '../project_graduate.html',
+        'target_folder': '../project/graduate',
+        'target_sub_folders': ['Q1', 'Q2', 'Q3', 'Q4'],
+    },
+}
 
 default_readme = '../project/template/readme.txt'
 default_image = '../project/template/catch.png'
@@ -36,12 +47,6 @@ def getPrefix():
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">Hao-en Sung (Hogan)</a>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -49,17 +54,19 @@ def getPrefix():
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="home.html">HOME</a></li>
                         <li><a href="blog.html">BLOG</a></li>
-                        <li class="active"><a href="project.html">PROJECT</a></li>
+                        <li class="dropdown active">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="project_undergrad.html">Undergrad Project</a></li>
+                              <li><a href="project_graduate.html">Graduate Project</a></li>
+                            </ul>
+                        </li>
                         <li><a href="research.html">RESEARCH</a></li>
                         <li><a href="about.html">ABOUT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-        <div class="container">
-            <div class="page-header">
-                <h3> Undergrad projects </h3>
-            </div>
 '''
     return s
 
@@ -78,66 +85,85 @@ def getSuffix():
     return s
 
 
-def getContent():
-    s = ''
-    folderNames = os.listdir(target_folder)
-    folderNames = filter(lambda x: x[0] != '.', folderNames)
+def getContent(name, target_folder, target_sub_folders):
+    s = '''        <div class="container">
+            <div class="page-header">
+                <h1> ''' + name + ''' </h1>
+            </div>
 
-    for folderName in folderNames:
-        if folderName == 'template':
+            <hr>
+'''
+
+    for target_sub_folder in target_sub_folders:
+        if not os.path.exists(os.path.join(target_folder, target_sub_folder)):
             continue
 
-        projName = os.path.join(target_folder, folderName)
-        fileNames = os.listdir(projName)
-        fileNames = filter(lambda x: x[0] != '.', fileNames)
+        folderNames = os.listdir(os.path.join(target_folder, target_sub_folder))
+        folderNames = filter(lambda x: x[0] != '.', folderNames)
 
-        try:
-            reportPath = os.path.join(projName, filter(lambda x: x.find('report') >= 0, fileNames)[0])
-        except:
-            reportPath = default_report
-
-        try:
-            readmePath = os.path.join(projName, filter(lambda x: x.find('readme') >= 0, fileNames)[0])
-        except:
-            readmePath = default_readme
-
-        try:
-            imagePath = os.path.join(projName, filter(lambda x: x.find('png') >= 0, fileNames)[0])
-        except:
-            imagePath = default_image
-
-        with open(readmePath) as f:
-            t, st, cnt = [line.strip() for line in f.readlines()]
-
-        # hack: delete "../" for href
         s += '''
+            <h2 align="center"> ''' + target_sub_folder + ''' </h2>
+            <hr>
+'''
+
+        for folderName in folderNames:
+            projName = os.path.join(target_folder, target_sub_folder, folderName)
+            fileNames = os.listdir(projName)
+            fileNames = filter(lambda x: x[0] != '.', fileNames)
+
+            try:
+                reportPath = os.path.join(projName, filter(lambda x: x.find('report') >= 0, fileNames)[0])
+            except:
+                reportPath = default_report
+
+            try:
+                readmePath = os.path.join(projName, filter(lambda x: x.find('readme') >= 0, fileNames)[0])
+            except:
+                readmePath = default_readme
+
+            try:
+                imagePath = os.path.join(projName, filter(lambda x: x.find('png') >= 0, fileNames)[0])
+            except:
+                imagePath = default_image
+
+            with open(readmePath) as f:
+                t, st, cnt = [line.strip() for line in f.readlines()]
+
+            # hack: get relative location
+            report_p = pathlib.Path(reportPath)
+            rel_reportPath = str(pathlib.Path(*report_p.parts[1:]))
+
+            image_p = pathlib.Path(imagePath)
+            rel_imagePath = str(pathlib.Path(*image_p.parts[1:]))
+
+            s += '''            
             <div class="row">
                 <div class="col-md-1 vcenter"></div>
                 <div class="col-md-3 vcenter">
-                    <a target="_blank" href="''' + reportPath[3:] + '''">
-                        <img class="img-responsive" src="''' + imagePath[3:] + '''" alt="Image missing">
+                    <a target="_blank" href="''' + rel_reportPath + '''">
+                        <img class="img-responsive" src="''' + rel_imagePath + '''" alt="Image missing">
                     </a>
                 </div>
                 <div class="col-md-7 vcenter">
                     <h4> ''' + t + ''' </h4>
                     <h5> <i> ''' + st + ''' </i> </h5>
                     <p> ''' + cnt + ''' </p>
-                    <a target="_blank" class="btn btn-primary" href="''' + reportPath[3:] + '''"> 
+                    <a target="_blank" class="btn btn-primary" href="''' + rel_reportPath + '''"> 
                         Get the Report
                         <span class="glyphicon glyphicon-chevron-right"> 
                         </span>
                     </a>
 '''
 
-        if os.path.isfile(os.path.join(projName, 'source.zip')):
-            s += '''                    <a class="btn btn-primary" target="_blank" href="''' + os.path.join(projName[3:] , 'source.zip') + '''"> 
+            if os.path.isfile(os.path.join(projName, 'source.zip')):
+                s += '''                    <a class="btn btn-primary" target="_blank" href="''' + os.path.join(projName[3:] , 'source.zip') + '''"> 
                         Get the Source
                         <span class="glyphicon glyphicon-chevron-right"> 
                         </span>
                     </a>
 '''
 
-        s += '''                </div>
+            s += '''                </div>
                 <div class="col-md-1 vcenter"></div>
             </div>
             
@@ -151,10 +177,11 @@ def getContent():
 def main():
     prefix = getPrefix()
     suffix = getSuffix()
-    content = getContent()
 
-    with open(target_file, 'w') as f:
-        f.write(prefix + content + suffix)
+    for key, value in targets.items():
+        with open(value['target_file'], 'w') as f:
+            content = getContent(key, value['target_folder'], value['target_sub_folders'])
+            f.write(prefix + content + suffix)
 
 
 if __name__ == '__main__':
