@@ -77,6 +77,7 @@ def getSuffix():
 def getContent():
     s = ''
     folderNames = os.listdir(target_folder)
+    folderNames = filter(lambda x: x[0] != '.', folderNames)
 
     for folderName in folderNames:
         if folderName == 'template':
@@ -84,6 +85,7 @@ def getContent():
 
         projName = os.path.join(target_folder, folderName)
         fileNames = os.listdir(projName)
+        fileNames = filter(lambda x: x[0] != '.', fileNames)
 
         try:
             reportPath = os.path.join(projName, filter(lambda x: x.find('report') >= 0, fileNames)[0])
