@@ -101,6 +101,7 @@ def getPrefix_article():
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
           js = d.createElement(s); js.id = id;
+          js.async=true;
           js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
           fjs.parentNode.insertBefore(js, fjs);
         {}(document, 'script', 'facebook-jssdk'));</script>
@@ -249,6 +250,7 @@ def getContent(prefix, suffix):
                     <div class="fb-comments" data-href=''' + url + ''' data-width="100%" data-numposts="5"></div>
 
                     <br> </br>
+                    <hr>
                 </div>
             </div>
 '''
