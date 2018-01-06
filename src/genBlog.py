@@ -97,7 +97,7 @@ def getPrefix_article():
 
     <body style="background-color: rgba(240, 250, 240, 0.3)">
         <div id="fb-root"></div>
-        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery.min.js"></script>
         <script>{}</script>
 
         <!-- Fixed navbar -->
