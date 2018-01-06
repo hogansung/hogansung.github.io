@@ -123,10 +123,10 @@ def getSuffix():
     s = '''        </div>
 
         <!-- Bootstrap core JavaScript
-            ================================================== -->
-            <!-- Placed at the end of the document so the pages load faster -->
-            <script src="jquery/jquery-1.11.3.min.js"></script>
-            <script src="bootstrap/js/bootstrap.js"></script>
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="jquery/jquery-1.11.3.min.js"></script>
+        <script src="bootstrap/js/bootstrap.js"></script>
     </body>
 </html>'''
     return s
@@ -136,10 +136,10 @@ def getSuffix_article():
     s = '''        </div>
 
         <!-- Bootstrap core JavaScript
-            ================================================== -->
-            <!-- Placed at the end of the document so the pages load faster -->
-            <script src="../jquery/jquery-1.11.3.min.js"></script>
-            <script src="../bootstrap/js/bootstrap.js"></script>
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="../jquery/jquery-1.11.3.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.js"></script>
     </body>
 </html>'''
     return s
@@ -153,6 +153,8 @@ def getContent(prefix, suffix):
     s = '''            <div class="page-header">
                 <h1> Blog </h1>
             </div>
+
+            <br> </br>
 '''
 
     folderNames = os.listdir(target_folder)
@@ -202,7 +204,7 @@ def getContent(prefix, suffix):
                 </div>
             </div>
 
-            <!-- /.row -->
+            <br> </br>
             <hr>
 '''
 
