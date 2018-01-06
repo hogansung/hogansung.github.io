@@ -81,6 +81,11 @@ def getPrefix_article():
 
         <!-- Facebook moderate console -->
         <meta property="fb:app_id" content="158857908084540"/>
+        <meta property="og:url" content="{}"/>
+        <meta property="og:title" content="{}"/>
+        <meta property="og:description" content="{}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:site_name" content="Hogan's Personal Website"/>
 
         <!-- Bootstrap core CSS -->
         <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -92,13 +97,13 @@ def getPrefix_article():
 
     <body style="background-color: rgba(240, 250, 240, 0.3)">
         <div id="fb-root"></div>
-        <script>(function(d, s, id) {
+        <script>(function(d, s, id) {}
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
           js = d.createElement(s); js.id = id;
           js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
           fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        {}(document, 'script', 'facebook-jssdk'));</script>
 
         <!-- Fixed navbar -->
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -222,6 +227,7 @@ def getContent(prefix, suffix):
 
         # for article content
         mtime = time.ctime(os.path.getmtime(articlePath))
+        url = "https://hogansung.github.io/article-pages/article_" + articleHash + ".html"
         ss = '''
             <div class="row">
                 <div class="page-header">
@@ -240,13 +246,14 @@ def getContent(prefix, suffix):
                     <br> </br>
                     <hr>
 
-                    <div class="fb-comments" data-href="https://hogansung.github.io/article-pages/article_''' + articleHash + '''.html" data-width="100%" data-numposts="5"></div>
+                    <div class="fb-comments" data-href=''' + url + ''' data-width="100%" data-numposts="5"></div>
+
+                    <br> </br>
                 </div>
             </div>
 '''
-
         with open(target_site, 'w') as f:
-            f.write(prefix + ss + suffix)
+            f.write(prefix.format(url, t, gs[:PREVIEW_LIMIT] + '...', '{', '}') + ss + suffix)
             
     return s
 
