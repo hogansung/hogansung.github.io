@@ -1,3 +1,0 @@
-Information Retrieval Final Project
-Dec 2012 - Jan 2013
-In this project, we want to improve the interface for Google image search, so that the similar results can be clustered in one category but not scatter all around. For example, if one searches “apple”, products from “Apple.com” should be differed from a real apple. We not only invent a clustering algorithm but also design an interface for users.

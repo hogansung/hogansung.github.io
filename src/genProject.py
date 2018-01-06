@@ -6,12 +6,12 @@ targets = {
     'Undergrad Project': {
         'target_file': '../project_undergrad.html',
         'target_folder': '../project/undergrad',
-        'target_sub_folders': ['Freshman', 'Sophomore', 'Junior', 'Senior'],
+        'target_sub_folders': ['Freshman (2011)', 'Sophomore (2012)', 'Junior (2013)', 'Senior (2014)'],
     },
     'Graduate Project': {
         'target_file': '../project_graduate.html',
         'target_folder': '../project/graduate',
-        'target_sub_folders': ['Q1', 'Q2', 'Q3', 'Q4'],
+        'target_sub_folders': ['Fall (2016)', 'Winter (2016)', 'Spring (2017)', 'Fall (2017)'],
     },
 }
 
@@ -91,7 +91,7 @@ def getContent(name, target_folder, target_sub_folders):
                 <h1> ''' + name + ''' </h1>
             </div>
 
-            <hr>
+            <br> </br>
 '''
 
     for target_sub_folder in target_sub_folders:
@@ -103,7 +103,7 @@ def getContent(name, target_folder, target_sub_folders):
 
         s += '''
             <h2 align="center"> ''' + target_sub_folder + ''' </h2>
-            <hr>
+            <br> </br>
 '''
 
         for folderName in folderNames:
@@ -166,10 +166,11 @@ def getContent(name, target_folder, target_sub_folders):
             s += '''                </div>
                 <div class="col-md-1 vcenter"></div>
             </div>
-            
-            <!-- /.row -->
-            <hr>
 
+            <br> </br>
+'''
+        s += '''
+        <hr>
 '''
     return s
 

@@ -28,7 +28,7 @@ def main():
                     pg.resize(width, height)
                     pg.background_color = Color('white')
                     pg.alpha_channel = 'remove'
-                    pg.save(filename=os.path.join(path, fd, 'thumbnail.png'))
+                    pg.save(filename=os.path.join(path, fd, sfd, 'thumbnail.png'))
 
 
 if __name__ == '__main__':

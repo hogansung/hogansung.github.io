@@ -1,3 +1,0 @@
-Digital Circuit Lab Experiment 3 (Final Project)
-Dec 2012 - Jan 2013
-Our task is to implement a real calculator on FPGA. We not only need to consider the input and output schemes, but also implement all components in a real CPU, including ALU unit. This project is extremely challenging to us, since the required knowledge far exceeds what we have learned in class. It turns out that we almost need to Google everything online. Unfortunately, our trial at the end fails because the lack of time.

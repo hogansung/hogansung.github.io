@@ -1,0 +1,3 @@
+Operation System Homework 3
+Dec 2012 - Jan 2013
+Students are given a small OS system called nachos, and are asked to do some changes to its OS instructions. This time, I implement the functionality of multithreading in this operation system. There are multiple tricky things I need to take care of: 1) how to deal with output to screen at the same time, 2) how to allocate address space for thread, and 3) how to deal with context switch.
