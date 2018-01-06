@@ -247,6 +247,7 @@ def getContent(prefix, suffix):
                     <br> </br>
                     <hr>
 
+                    <div class="fb-like" data-href=''' + url + ''' data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                     <div class="fb-comments" data-href=''' + url + ''' data-width="100%" data-numposts="5"></div>
 
                     <br> </br>
