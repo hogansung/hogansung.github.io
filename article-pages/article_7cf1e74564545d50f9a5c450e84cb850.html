@@ -25,8 +25,9 @@
 
     <body style="background-color: rgba(240, 250, 240, 0.3)">
         <div id="fb-root"></div>
+        <script src="http://code.jquery.com/jquery.min.js"></script>
         <script>
-            $(window).bind("load", function() {}
+            $(window).bind("load", function() {
                 $.getScript('../src/js/social.js', function() {});
             });
         </script>

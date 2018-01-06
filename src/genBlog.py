@@ -97,6 +97,7 @@ def getPrefix_article():
 
     <body style="background-color: rgba(240, 250, 240, 0.3)">
         <div id="fb-root"></div>
+        <script src="http://code.jquery.com/jquery.min.js"></script>
         <script>{}</script>
 
         <!-- Fixed navbar -->
@@ -223,7 +224,7 @@ def getContent(prefix, suffix):
         mtime = time.ctime(os.path.getmtime(articlePath))
         url = "https://hogansung.github.io/article-pages/article_" + articleHash + ".html"
         script = '''
-            $(window).bind("load", function() {}
+            $(window).bind("load", function() {
                 $.getScript('../src/js/social.js', function() {});
             });
         '''
