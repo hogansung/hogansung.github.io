@@ -28,8 +28,9 @@ def main():
                     pg.resize(width, height)
                     pg.background_color = Color('white')
                     pg.alpha_channel = 'remove'
-                    #pg.compression_quality = 75
+                    pg.compression_quality = 100
                     pg.save(filename=os.path.join(path, fd, sfd, 'thumbnail.jpg'))
+        break
 
 
 if __name__ == '__main__':
