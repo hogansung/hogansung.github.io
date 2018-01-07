@@ -19,6 +19,16 @@
     </head>
 
     <body style="padding:0; background-color: rgba(240, 250, 240, 0.3)">
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112083134-1"></script>
+        <script>
+            $(window).bind("load", function() {
+                $.getScript('src/js/social.js', function() {});
+            });
+        </script>
+
         <!-- Fixed navbar -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
