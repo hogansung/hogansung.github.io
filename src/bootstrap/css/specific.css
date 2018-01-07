@@ -1,8 +1,8 @@
 /* Template-specific stuff
- *  *
- *   * Customizations just for the template; these are not necessary for anything
- *    * with disabling the responsiveness.
- *     */
+ **
+ ** Customizations just for the template; these are not necessary for anything
+ ** with disabling the responsiveness.
+ **/
 
 /* Account for fixed navbar */
 body {
@@ -262,7 +262,7 @@ body,
 }
 
 .index-full {
-    background: url("../../images/stay_foolish-wallpaper-1920x1080.jpg") no-repeat fixed;
+    background: url("../../../../images/stay_foolish-wallpaper-1920x1080.jpg") no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -270,7 +270,7 @@ body,
 }
 
 .normal-full {
-    background: url("../../images/lone_tree-wallpaper-1920x1200_op50.jpg") no-repeat fixed;
+    background: url("../../../images/lone_tree-wallpaper-1920x1200_op50.jpg") no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

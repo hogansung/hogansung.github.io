@@ -92,7 +92,7 @@ svg:not(:root) {
 figure {
   margin: 1em 40px;
 }
-hr {
+/r {
   height: 0;
   -webkit-box-sizing: content-box;
      -moz-box-sizing: content-box;
@@ -1147,9 +1147,9 @@ img {
 }
 hr {
   margin-top: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   border: 0;
-  border-top: 2px solid #dcdcdc;
+  border-top: 2px solid #eee;
 }
 .sr-only {
   position: absolute;
@@ -6801,7 +6801,7 @@ button.close {
 /*# sourceMappingURL=bootstrap.css.map */
 
 .index-full {
-    background: url("../../images/stay_foolish-wallpaper-1920x1080.jpg") no-repeat fixed;
+    background: url("../../../images/stay_foolish-wallpaper-1920x1080.jpg") no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -6809,7 +6809,7 @@ button.close {
 }
 
 .normal-full {
-    background: url("../../images/lone_tree-wallpaper-1920x1200_op50.jpg") no-repeat fixed;
+    background: url("../../../images/lone_tree-wallpaper-1920x1200_op50.jpg") no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

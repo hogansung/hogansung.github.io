@@ -31,11 +31,11 @@ def getPrefix():
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Bootstrap core CSS -->
-        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="src/bootstrap/css/bootstrap.css" rel="stylesheet">
 
         <!-- Bootstrap social CSS -->
-        <link href="bootstrap-social/bootstrap-social.css" rel="stylesheet">
-        <link href="bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+        <link href="src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+        <link href="src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
 
         <!-- Manual CSS -->
         <link href="src/manual.css" rel="stylesheet">
@@ -77,8 +77,8 @@ def getSuffix():
         <!-- Bootstrap core JavaScript
             ================================================== -->
             <!-- Placed at the end of the document so the pages load faster -->
-            <script src="jquery/jquery-1.11.3.min.js"></script>
-            <script src="bootstrap/js/bootstrap.js"></script>
+            <script src="src/jquery/jquery-1.11.3.min.js"></script>
+            <script src="src/bootstrap/js/bootstrap.js"></script>
         </div>
     </body>
 </html>'''
@@ -91,7 +91,7 @@ def getContent(name, target_folder, target_sub_folders):
                 <h1> ''' + name + ''' </h1>
             </div>
 
-            <br> </br>
+            <br>
 '''
 
     for target_sub_folder in target_sub_folders:
@@ -103,7 +103,7 @@ def getContent(name, target_folder, target_sub_folders):
 
         s += '''
             <h2 align="center"> ''' + target_sub_folder + ''' </h2>
-            <br> </br>
+            <br>
 '''
 
         for folderName in folderNames:
@@ -166,11 +166,10 @@ def getContent(name, target_folder, target_sub_folders):
             s += '''                </div>
                 <div class="col-md-1 vcenter"></div>
             </div>
-
-            <br> </br>
 '''
         s += '''
         <hr>
+        <br>
 '''
     return s
 
