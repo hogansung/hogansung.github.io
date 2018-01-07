@@ -1078,8 +1078,10 @@ th {
 }
 html {
   font-size: 10px;
-
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin-left: calc(100vw - 100%);
+  margin-right: 0;
+  overflow: auto
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -4215,7 +4217,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -4300,7 +4301,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-fixed-top,
 .navbar-fixed-bottom {
-  position: fixed;
   right: 0;
   left: 0;
   z-index: 1030;

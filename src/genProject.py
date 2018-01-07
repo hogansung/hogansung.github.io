@@ -41,7 +41,7 @@ def getPrefix():
         <link href="src/manual.css" rel="stylesheet">
     </head>
 
-    <body style="background-color: rgba(240, 250, 240, 0.3)">
+    <body style="padding:0; background-color: rgba(240, 250, 240, 0.3)">
         <!-- Fixed navbar -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -166,6 +166,9 @@ def getContent(name, target_folder, target_sub_folders):
             s += '''                </div>
                 <div class="col-md-1 vcenter"></div>
             </div>
+
+            <br>
+            <br>
 '''
         s += '''
         <hr>

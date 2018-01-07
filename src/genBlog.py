@@ -37,7 +37,7 @@ def getPrefix():
         <link href="src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
     </head>
 
-    <body style="background-color: rgba(240, 250, 240, 0.3)">
+    <body style="padding:0; background-color: rgba(240, 250, 240, 0.3)">
         <!-- Fixed navbar -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -95,7 +95,7 @@ def getPrefix_article():
         <link href="../src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
     </head>
 
-    <body style="background-color: rgba(240, 250, 240, 0.3)">
+    <body style="padding:0; background-color: rgba(240, 250, 240, 0.3)">
         <div id="fb-root"></div>
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script>{}</script>

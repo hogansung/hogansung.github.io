@@ -3,3 +3,5 @@
     vertical-align: middle;
     float: none;
 }
+
+html { overflow-y: scroll; }
