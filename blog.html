@@ -20,9 +20,11 @@
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112083134-1"></script>
-        $(window).bind("load", function() {
-            $.getScript('src/js/social.js', function() {});
-        });
+        <script>
+            $(window).bind("load", function() {
+                $.getScript('src/js/social.js', function() {});
+            });
+        </script>
         
         <!-- Fixed navbar -->
         <nav class="navbar navbar-default navbar-fixed-top">
