@@ -163,7 +163,7 @@ def extract(line):
 
 def getContent(prefix, suffix):
     s = '''            <div class="page-header">
-                <h1> Blog </h1>
+                <h2> Blog </h2>
             </div>
 '''
 

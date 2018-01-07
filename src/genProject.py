@@ -88,7 +88,7 @@ def getSuffix():
 def getContent(name, target_folder, target_sub_folders):
     s = '''        <div class="container">
             <div class="page-header">
-                <h1> ''' + name + ''' </h1>
+                <h2> ''' + name + ''' </h2>
             </div>
 
             <br>
@@ -102,7 +102,7 @@ def getContent(name, target_folder, target_sub_folders):
         folderNames = filter(lambda x: x[0] != '.', folderNames)
 
         s += '''
-            <h2 align="center"> ''' + target_sub_folder + ''' </h2>
+            <h3 align="center"> ''' + target_sub_folder + ''' </h3>
             <br>
 '''
 
@@ -122,7 +122,7 @@ def getContent(name, target_folder, target_sub_folders):
                 readmePath = default_readme
 
             try:
-                imagePath = os.path.join(projName, filter(lambda x: x.find('png') >= 0, fileNames)[0])
+                imagePath = os.path.join(projName, filter(lambda x: x.find('jpg') >= 0, fileNames)[0])
             except:
                 imagePath = default_image
 

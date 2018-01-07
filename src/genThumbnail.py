@@ -22,13 +22,14 @@ def main():
                 one_page = all_page.sequence[0]
 
                 with Image(one_page) as pg:
-                    pg.format = 'png'
-                    width = long(pg.width * 0.6)
-                    height = long(pg.height * 0.6)
+                    pg.format = 'jpeg'
+                    width = long(pg.width * 0.3)
+                    height = long(pg.height * 0.3)
                     pg.resize(width, height)
                     pg.background_color = Color('white')
                     pg.alpha_channel = 'remove'
-                    pg.save(filename=os.path.join(path, fd, sfd, 'thumbnail.png'))
+                    #pg.compression_quality = 75
+                    pg.save(filename=os.path.join(path, fd, sfd, 'thumbnail.jpg'))
 
 
 if __name__ == '__main__':
