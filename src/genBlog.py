@@ -35,6 +35,9 @@ def getPrefix():
         <!-- Bootstrap social CSS -->
         <link href="src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
         <link href="src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+
+        <!-- Manual CSS -->
+        <link href="src/css/manual.css" rel="stylesheet">
     </head>
 
     <body style="padding:0; background-color: rgba(240, 250, 240, 0.3)">
@@ -42,9 +45,11 @@ def getPrefix():
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112083134-1"></script>
+        <script async src="https://apis.google.com/js/api.js"></script>
         <script>
             $(window).bind("load", function() {
                 $.getScript('src/js/social.js', function() {});
+                $.getScript('src/js/analytics.js', function() {});
             });
         </script>
         
@@ -103,6 +108,9 @@ def getPrefix_article():
         <!-- Bootstrap social CSS -->
         <link href="../src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
         <link href="../src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+
+        <!-- Manual CSS -->
+        <link href="../src/css/manual.css" rel="stylesheet">
     </head>
 
     <body style="padding:0; background-color: rgba(240, 250, 240, 0.3)">
@@ -110,6 +118,7 @@ def getPrefix_article():
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112083134-1"></script>
+        <script async src="https://apis.google.com/js/api.js"></script>
         <script>{}</script>
 
         <!-- Fixed navbar -->
@@ -235,6 +244,7 @@ def getContent(prefix, suffix):
         script = '''
             $(window).bind("load", function() {
                 $.getScript('../src/js/social.js', function() {});
+                $.getScript('../src/js/analytics.js', function() {});
             });
         '''
 

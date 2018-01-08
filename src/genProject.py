@@ -49,6 +49,7 @@ def getPrefix():
         <script>
             $(window).bind("load", function() {
                 $.getScript('src/js/social.js', function() {});
+                $.getScript('src/js/analytics.js', function() {});
             });
         </script>
 
