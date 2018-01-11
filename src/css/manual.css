@@ -12,3 +12,9 @@
   margin-right: -2px;
   color: #fff;
 }
+
+p.auto {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}

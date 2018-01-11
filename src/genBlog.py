@@ -41,18 +41,6 @@ def getPrefix():
     </head>
 
     <body style="padding:0; background-color: rgba(240, 250, 240, 0.3)">
-        <script src="https://code.jquery.com/jquery.min.js"></script>
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112083134-1"></script>
-        <script async src="https://apis.google.com/js/api.js"></script>
-        <script>
-            $(window).bind("load", function() {
-                $.getScript('src/js/social.js', function() {});
-                $.getScript('src/js/analytics.js', function() {});
-            });
-        </script>
-        
         <!-- Fixed navbar -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -78,6 +66,7 @@ def getPrefix():
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
+
         <div class="container">
 '''
     return s
@@ -114,13 +103,6 @@ def getPrefix_article():
     </head>
 
     <body style="padding:0; background-color: rgba(240, 250, 240, 0.3)">
-        <script src="https://code.jquery.com/jquery.min.js"></script>
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112083134-1"></script>
-        <script async src="https://apis.google.com/js/api.js"></script>
-        <script>{}</script>
-
         <!-- Fixed navbar -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -155,11 +137,19 @@ def getPrefix_article():
 def getSuffix():
     s = '''        </div>
 
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="src/jquery/jquery-1.11.3.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://code.jquery.com/jquery.min.js"></script>
         <script src="src/bootstrap/js/bootstrap.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+        <script async src="https://apis.google.com/js/api.js"></script>
+        <script>
+            $(window).bind("load", function() {
+                $.getScript('src/js/social.js', function() {});
+                $.getScript('src/js/analytics.js', function() {});
+            });
+        </script>
     </body>
 </html>'''
     return s
@@ -168,11 +158,19 @@ def getSuffix():
 def getSuffix_article():
     s = '''        </div>
 
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="../src/jquery/jquery-1.11.3.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://code.jquery.com/jquery.min.js"></script>
         <script src="../src/bootstrap/js/bootstrap.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+        <script async src="https://apis.google.com/js/api.js"></script>
+        <script>
+            $(window).bind("load", function() {
+                $.getScript('../src/js/social.js', function() {});
+                $.getScript('../src/js/analytics.js', function() {});
+            });
+        </script>
     </body>
 </html>'''
     return s
@@ -255,14 +253,6 @@ def getContent(prefix, suffix):
         # preprocess url
         c_url = "https://hogansung.github.io/article-pages/article_" + articleHash + ".html"
 
-        # preprocess script
-        script = '''
-            $(window).bind("load", function() {
-                $.getScript('../src/js/social.js', function() {});
-                $.getScript('../src/js/analytics.js', function() {});
-            });
-        '''
-
         # for article content
         ss = '''
             <div class="row">
@@ -313,7 +303,7 @@ def getContent(prefix, suffix):
 '''
 
         with open(c_target, 'w') as f:
-            f.write(prefix.format(c_url, t, gs[:PREVIEW_LIMIT] + '...', script) + ss + suffix)
+            f.write(prefix.format(c_url, t, gs[:PREVIEW_LIMIT] + '...') + ss + suffix)
             
     return s
 

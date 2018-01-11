@@ -3,15 +3,23 @@ import pathlib
 
 
 targets = {
-    'Undergrad Project': {
-        'target_file': '../project_undergrad.html',
-        'target_folder': '../project/undergrad',
-        'target_sub_folders': ['Freshman (2011)', 'Sophomore (2012)', 'Junior (2013)', 'Senior (2014)'],
-    },
-    'Graduate Project': {
-        'target_file': '../project_graduate.html',
-        'target_folder': '../project/graduate',
-        'target_sub_folders': ['Fall (2016)', 'Winter (2016)', 'Spring (2017)', 'Fall (2017)'],
+    'Research': {
+        'target_file': '../research.html',
+        'target_folder': '../research',
+        'target_sub_folders': [
+            {
+                'target_sub_folder': 'Accepted Papers',
+                'report_link': True,
+            },
+            {
+                'target_sub_folder': 'Pending Papers (details hidden)',
+                'report_link': False,
+            },
+            {
+                'target_sub_folder': 'Unsubmitted Works',
+                'report_link': True,
+            },
+        ]
     },
 }
 
@@ -54,19 +62,20 @@ def getPrefix():
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="home.html">HOME</a></li>
                         <li><a href="blog.html">BLOG</a></li>
-                        <li class="dropdown active">
+                        <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                               <li><a href="project_undergrad.html">Undergrad Project</a></li>
                               <li><a href="project_graduate.html">Graduate Project</a></li>
                             </ul>
                         </li>
-                        <li><a href="research.html">RESEARCH</a></li>
+                        <li class="active"><a href="research.html">RESEARCH</a></li>
                         <li><a href="about.html">ABOUT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
+
 '''
     return s
 
@@ -97,25 +106,25 @@ def getContent(name, target_folder, target_sub_folders):
             <div class="page-header">
                 <h2> ''' + name + ''' </h2>
             </div>
-
 '''
 
-    for target_sub_folder in target_sub_folders:
+    for info in target_sub_folders:
+        target_sub_folder = info['target_sub_folder']
+        report_link = info['report_link']
+
         if not os.path.exists(os.path.join(target_folder, target_sub_folder)):
             continue
 
         folderNames = os.listdir(os.path.join(target_folder, target_sub_folder))
         folderNames = filter(lambda x: x[0] != '.', folderNames)
 
-        s += '''
-            <div class="row">
+        s += '''            <div class="row">
                 <div class="col-md-12">
                     <h3 align="center"> ''' + target_sub_folder + ''' </h3>
                 </div>
             </div>
 
             <br>
-
 '''
 
         for folderName in folderNames:
@@ -139,7 +148,12 @@ def getContent(name, target_folder, target_sub_folders):
                 imagePath = default_image
 
             with open(readmePath) as f:
-                t, st, cnt = [line.strip() for line in f.readlines()]
+                lines = [line.strip() for line in f.readlines()]
+                if len(lines) == 3:
+                    t, st, cnt = lines
+                else:
+                    t, st, abstract, keywords = lines[:4]
+                    link = lines[4] if len(lines) == 5 else None
 
             # hack: get relative location
             report_p = pathlib.Path(reportPath)
@@ -150,16 +164,34 @@ def getContent(name, target_folder, target_sub_folders):
 
             s += '''            
             <div class="row">
-                <div class="col-md-3 vcenter">
-                    <a target="_blank" href="''' + rel_reportPath + '''">
-                        <img class="img-responsive" src="''' + rel_imagePath + '''" alt="Image missing">
+                <div class="col-md-5 vcenter">
+'''
+            if report_link:
+                s += '''                    <a target="_blank" href="''' + rel_reportPath + '''">
+'''
+            else:
+                s += '''                    <a>
+'''
+
+            s += '''                        <img class="img-responsive" src="''' + rel_imagePath + '''" alt="Image missing">
                     </a>
                 </div><!--
-                --><div class="col-md-9 vcenter">
+                --><div class="col-md-7 vcenter">
                     <h4> ''' + t + ''' </h4>
                     <h5> <i> ''' + st + ''' </i> </h5>
-                    <p> ''' + cnt + ''' </p>
-                    <a target="_blank" class="btn btn-primary" href="''' + rel_reportPath + '''"> 
+                    <p class="auto"> <strong>Abstract:</strong> ''' + abstract + ''' </p>
+                    <p> <strong>Keywords:</strong> <i>''' + keywords + '''</i> </p>
+'''
+            
+            if link:
+                s += '''                    <p> <strong>Link:</strong> <a href="''' + link + '''">''' + link + '''</a> </p>
+'''
+            else:
+                s += '''                    <p> <strong>Link:</strong> Not available </p>
+'''
+
+            if report_link:
+                s += '''                    <a target="_blank" class="btn btn-primary" href="''' + rel_reportPath + '''"> 
                         Get the Report
                         <span class="glyphicon glyphicon-chevron-right"> 
                         </span>

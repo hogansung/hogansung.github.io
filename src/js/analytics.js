@@ -1,8 +1,7 @@
 /* Google Analyitcs API */
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'UA-112083134-1');
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-112083134-1', 'auto');
+ga('send', 'pageview');
 
 
 /* Google Analytics Retrieve Data */
