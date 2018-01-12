@@ -105,7 +105,7 @@ def getContent(name, target_folder, target_sub_folders):
             continue
 
         folderNames = os.listdir(os.path.join(target_folder, target_sub_folder))
-        folderNames = filter(lambda x: x[0] != '.', folderNames)
+        folderNames = filter(lambda x: x[0] != '.' and x[0] != '_', folderNames)
 
         s += '''
             <div class="row">
@@ -126,7 +126,8 @@ def getContent(name, target_folder, target_sub_folders):
             try:
                 reportPath = os.path.join(projName, filter(lambda x: x.find('report') >= 0, fileNames)[0])
             except:
-                reportPath = default_report
+                # reportPath = default_report
+                continue
 
             try:
                 readmePath = os.path.join(projName, filter(lambda x: x.find('readme') >= 0, fileNames)[0])

@@ -4,18 +4,18 @@ from wand.image import Image
 from wand.color import Color
 
 targets = [
-    # {
-    #     'target_folder': '../project/undergrad',
-    #     'ratio': 0.6,
-    # },
+    {
+        'target_folder': '../project/undergrad',
+        'ratio': 0.6,
+    },
     # {
     #     'target_folder': '../project/graduate',
     #     'ratio': 0.3,
     # },
-    {
-        'target_folder': '../research',
-        'ratio': 1.0,
-    },
+    #{
+    #    'target_folder': '../research',
+    #    'ratio': 1.0,
+    #},
 ]
 
 def main():
@@ -32,7 +32,14 @@ def main():
 
             for sfd in sfds:
                 f = os.path.join(target_folder, fd, sfd, 'report.pdf')
-                subprocess.call(['ls', f])
+                if os.path.exists(f):
+                    subprocess.call(['ls', f])
+                else:
+                    continue
+
+                if os.path.exists(os.path.join(target_folder, fd, sfd, 'thumbnail.png')):
+                    subprocess.call(['rm', os.path.join(target_folder, fd, sfd, 'thumbnail.png')])
+
                 all_page = Image(filename=f)
                 one_page = all_page.sequence[0]
 
