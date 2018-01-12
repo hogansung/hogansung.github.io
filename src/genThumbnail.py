@@ -8,14 +8,14 @@ targets = [
         'target_folder': '../project/undergrad',
         'ratio': 0.6,
     },
-    # {
-    #     'target_folder': '../project/graduate',
-    #     'ratio': 0.3,
-    # },
-    #{
-    #    'target_folder': '../research',
-    #    'ratio': 1.0,
-    #},
+    {
+        'target_folder': '../project/graduate',
+        'ratio': 0.3,
+    },
+    {
+        'target_folder': '../research',
+        'ratio': 1.0,
+    },
 ]
 
 def main():

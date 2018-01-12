@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<UserCar>
+	<Collision id="1" x="1272.537" y="0.6474814" type="car" timeStamp="1432870016"/>
+	<Collision id="2" x="1302.263" y="0.6467841" type="edge" timeStamp="1432870021"/>
+	<Collision id="3" x="2032.454" y="0.6467412" type="car" timeStamp="1432870061"/>
+	<Collision id="4" x="2037.441" y="0.9840775" type="edge" timeStamp="1432870062"/>
+	<Collision id="5" x="2037.441" y="0.9840775" type="edge" timeStamp="1432870062"/>
+	<Collision id="6" x="2037.441" y="0.9840775" type="edge" timeStamp="1432870062"/>
+	<Collision id="7" x="2037.441" y="0.9840775" type="edge" timeStamp="1432870062"/>
+	<Collision id="8" x="2038.02" y="0.9699205" type="edge" timeStamp="1432870062"/>
+	<Collision id="9" x="2038.576" y="0.9442739" type="edge" timeStamp="1432870062"/>
+	<Collision id="10" x="2038.576" y="0.9442739" type="edge" timeStamp="1432870062"/>
+	<Collision id="11" x="2038.576" y="0.9442739" type="edge" timeStamp="1432870062"/>
+	<Collision id="12" x="2038.576" y="0.9442739" type="car" timeStamp="1432870062"/>
+	<Collision id="13" x="2038.908" y="1.258381" type="edge" timeStamp="1432870062"/>
+	<Collision id="14" x="2038.908" y="1.258381" type="edge" timeStamp="1432870062"/>
+	<Collision id="15" x="2038.976" y="1.30647" type="edge" timeStamp="1432870062"/>
+	<Collision id="16" x="2039.456" y="1.445113" type="edge" timeStamp="1432870063"/>
+	<Collision id="17" x="2039.456" y="1.445113" type="edge" timeStamp="1432870063"/>
+	<Collision id="18" x="2039.456" y="1.445113" type="edge" timeStamp="1432870063"/>
+	<Collision id="19" x="2039.518" y="1.451963" type="edge" timeStamp="1432870063"/>
+	<Collision id="20" x="3035.031" y="0.6418906" type="edge" timeStamp="1432870120"/>
+	<Collision id="21" x="3396.681" y="0.6472591" type="car" timeStamp="1432870144"/>
+	<Collision id="22" x="3400.077" y="0.9683904" type="car" timeStamp="1432870144"/>
+	<Collision id="23" x="3400.385" y="0.9684765" type="edge" timeStamp="1432870144"/>
+	<Collision id="24" x="3401.166" y="0.9527589" type="edge" timeStamp="1432870144"/>
+	<Collision id="25" x="3401.166" y="0.9527589" type="edge" timeStamp="1432870144"/>
+	<Collision id="26" x="3401.166" y="0.9527589" type="edge" timeStamp="1432870144"/>
+	<Collision id="27" x="3401.227" y="0.9660195" type="edge" timeStamp="1432870144"/>
+	<Collision id="28" x="3402.195" y="1.228305" type="edge" timeStamp="1432870145"/>
+	<Collision id="29" x="3402.224" y="1.233911" type="edge" timeStamp="1432870145"/>
+	<Collision id="30" x="3402.224" y="1.233911" type="edge" timeStamp="1432870145"/>
+	<Collision id="31" x="3402.331" y="1.268535" type="edge" timeStamp="1432870145"/>
+	<Collision id="32" x="3403.559" y="0.8484877" type="edge" timeStamp="1432870146"/>
+	<Collision id="33" x="3403.559" y="0.8484877" type="edge" timeStamp="1432870146"/>
+	<Collision id="34" x="3403.559" y="0.8484877" type="edge" timeStamp="1432870146"/>
+	<Collision id="35" x="4807.222" y="0.6639349" type="edge" timeStamp="1432870210"/>
+	<Collision id="36" x="4807.839" y="0.8665422" type="edge" timeStamp="1432870210"/>
+	<Collision id="37" x="4818.647" y="0.6654471" type="edge" timeStamp="1432870212"/>
+	<Collision id="38" x="4818.731" y="0.6907355" type="edge" timeStamp="1432870212"/>
+	<Collision id="39" x="4819.687" y="0.7830521" type="edge" timeStamp="1432870212"/>
+	<Collision id="40" x="5631.756" y="0.6317165" type="edge" timeStamp="1432870247"/>
+	<Collision id="41" x="5635.305" y="0.6649204" type="car" timeStamp="1432870248"/>
+	<Collision id="42" x="5635.049" y="0.6553591" type="car" timeStamp="1432870249"/>
+</UserCar>

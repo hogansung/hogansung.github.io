@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<UserCar>
+	<Collision id="1" x="2060.335" y="0.6440811" type="car" timeStamp="1436608594"/>
+	<Collision id="2" x="2063.232" y="0.643793" type="car" timeStamp="1436608594"/>
+	<Collision id="3" x="2065.399" y="0.6456935" type="car" timeStamp="1436608594"/>
+	<Collision id="4" x="2065.695" y="0.6462085" type="car" timeStamp="1436608594"/>
+	<Collision id="5" x="2067.46" y="0.6506106" type="car" timeStamp="1436608594"/>
+	<Collision id="6" x="2077.12" y="0.6466525" type="edge" timeStamp="1436608595"/>
+	<Collision id="7" x="2077.356" y="0.6568701" type="edge" timeStamp="1436608595"/>
+	<Collision id="8" x="2079.229" y="0.6806396" type="edge" timeStamp="1436608595"/>
+	<Collision id="9" x="3545.074" y="0.6433842" type="edge" timeStamp="1436608669"/>
+	<Collision id="10" x="3547.181" y="0.6601798" type="edge" timeStamp="1436608670"/>
+</UserCar>

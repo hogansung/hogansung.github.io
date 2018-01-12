@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<UserCar>
+	<Collision id="1" x="2054.878" y="0.6733439" type="car" timeStamp="1435997562"/>
+	<Collision id="2" x="2584.939" y="0.6425709" type="edge" timeStamp="1435997593"/>
+	<Collision id="3" x="2796.636" y="0.6440403" type="edge" timeStamp="1435997601"/>
+	<Collision id="4" x="2858.632" y="0.6469757" type="car" timeStamp="1435997604"/>
+	<Collision id="5" x="2880.701" y="0.6854163" type="edge" timeStamp="1435997606"/>
+</UserCar>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<UserCar>
+	<Collision id="1" x="2852.58" y="0.6456405" type="edge" timeStamp="1432866094"/>
+	<Collision id="2" x="2853.789" y="0.6469816" type="edge" timeStamp="1432866094"/>
+	<Collision id="3" x="4043.674" y="0.6434981" type="car" timeStamp="1432866158"/>
+	<Collision id="4" x="4044.77" y="0.6434957" type="car" timeStamp="1432866158"/>
+	<Collision id="5" x="4045.596" y="0.6434943" type="car" timeStamp="1432866158"/>
+	<Collision id="6" x="4045.872" y="0.6434945" type="car" timeStamp="1432866158"/>
+	<Collision id="7" x="4046.04" y="0.6479924" type="car" timeStamp="1432866158"/>
+	<Collision id="8" x="4046.686" y="0.6598779" type="car" timeStamp="1432866158"/>
+	<Collision id="9" x="4047.426" y="0.6723891" type="car" timeStamp="1432866158"/>
+	<Collision id="10" x="4048.177" y="0.7358654" type="car" timeStamp="1432866158"/>
+	<Collision id="11" x="4048.918" y="0.8282111" type="car" timeStamp="1432866159"/>
+	<Collision id="12" x="4538.19" y="0.6643729" type="edge" timeStamp="1432866201"/>
+	<Collision id="13" x="4542.58" y="0.645404" type="car" timeStamp="1432866203"/>
+	<Collision id="14" x="4543.22" y="0.6444906" type="car" timeStamp="1432866203"/>
+	<Collision id="15" x="4546.44" y="0.6436431" type="car" timeStamp="1432866205"/>
+	<Collision id="16" x="4546.836" y="0.6433285" type="car" timeStamp="1432866205"/>
+	<Collision id="17" x="4547.101" y="0.6427902" type="car" timeStamp="1432866205"/>
+	<Collision id="18" x="4547.332" y="0.6426184" type="car" timeStamp="1432866205"/>
+	<Collision id="19" x="4547.617" y="0.6428778" type="car" timeStamp="1432866206"/>
+	<Collision id="20" x="4547.862" y="0.6431909" type="car" timeStamp="1432866206"/>
+	<Collision id="21" x="4548.012" y="0.6433716" type="car" timeStamp="1432866206"/>
+	<Collision id="22" x="4548.255" y="0.6435153" type="car" timeStamp="1432866206"/>
+	<Collision id="23" x="4548.543" y="0.6434888" type="car" timeStamp="1432866206"/>
+	<Collision id="24" x="4782.917" y="0.6443841" type="edge" timeStamp="1432866231"/>
+</UserCar>

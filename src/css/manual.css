@@ -18,3 +18,9 @@ p.auto {
   -ms-hyphens: auto;
   hyphens: auto;
 }
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+}

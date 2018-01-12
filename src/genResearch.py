@@ -127,7 +127,7 @@ def getContent(name, target_folder, target_sub_folders):
             <br>
 '''
 
-        for folderName in folderNames:
+        for idx, folderName in enumerate(folderNames):
             projName = os.path.join(target_folder, target_sub_folder, folderName)
             fileNames = os.listdir(projName)
             fileNames = filter(lambda x: x[0] != '.', fileNames)
@@ -147,10 +147,16 @@ def getContent(name, target_folder, target_sub_folders):
             except:
                 imagePath = default_image
 
+            try:
+                videoPath = os.path.join(projName, filter(lambda x: x.find('video') >= 0, fileNames)[0])
+            except:
+                videoPath = None
+
             with open(readmePath) as f:
                 lines = [line.strip() for line in f.readlines()]
                 if len(lines) == 3:
                     t, st, cnt = lines
+                    abstract = keywords = ""
                 else:
                     t, st, abstract, keywords = lines[:4]
                     link = lines[4] if len(lines) == 5 else None
@@ -161,6 +167,22 @@ def getContent(name, target_folder, target_sub_folders):
 
             image_p = pathlib.Path(imagePath)
             rel_imagePath = str(pathlib.Path(*image_p.parts[1:]))
+
+            # hack: deal with media
+            medias = filter(lambda x: x.find('video') >= 0, fileNames)
+            if len(medias) > 0:
+                with open(os.path.join(projName, 'media.html'), 'w') as f:
+                    f.write('''<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <video style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);" width="100% height="100%" controls autoplay autoplay loop preload="auto">
+      <source src=''' + medias[0] + ''' type="video/mp4">
+    </video>
+</body>
+</html>
+''')
 
             s += '''            
             <div class="row">
@@ -184,7 +206,7 @@ def getContent(name, target_folder, target_sub_folders):
 '''
             
             if link:
-                s += '''                    <p> <strong>Link:</strong> <a href="''' + link + '''">''' + link + '''</a> </p>
+                s += '''                    <p> <strong>Link:</strong> <a href="''' + link + '''" target="_blank">''' + link + '''</a> </p>
 '''
             else:
                 s += '''                    <p> <strong>Link:</strong> Not available </p>
@@ -206,11 +228,27 @@ def getContent(name, target_folder, target_sub_folders):
                     </a>
 '''
 
+            if os.path.isfile(os.path.join(projName, 'media.html')):
+                s += '''                    <a class="btn btn-primary" target="_blank" href="''' + os.path.join(projName[3:] , 'media.html') + '''"> 
+                        Get the Video
+                        <span class="glyphicon glyphicon-chevron-right"> 
+                        </span>
+                    </a>
+'''
+
             s += '''                </div>
             </div>
 
             <br>
 '''
+
+            if idx < len(folderNames) - 1:
+                s += '''
+            <br>
+            <br>
+            <br>
+'''
+
         s += '''
             <hr>
 '''
