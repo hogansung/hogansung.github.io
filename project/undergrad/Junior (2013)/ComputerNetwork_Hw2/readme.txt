@@ -1,3 +1,3 @@
 Computer Network Homework 2
-Dec 2013 - Jan 2014
-HTML5 Bones, an ongoing project that provides a set of files that can either be used as templates or as guides on how to use some of the new HTML5 elements. The source is also available on GitHub.
+Nov 2013 - Jan 2014
+In this project, there are receiver, agent, and sender, which have their own main cpp files but share some functionalities in file named `common.h`. The task of this project is to balance the transmission loading from sender to receiver through varied numbers of agents. The transmitted file can be any format of file, including `txt`, `png`, or even music and video.

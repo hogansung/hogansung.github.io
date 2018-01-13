@@ -1,3 +1,3 @@
 Software Design Final Project
 Sep 2013 - Jan 2014
-HTML5 Bones, an ongoing project that provides a set of files that can either be used as templates or as guides on how to use some of the new HTML5 elements. The source is also available on GitHub.
+In this project throughout the whole semester, we are asked to target on an open-sourced project with 100,000+ lines of codes, understand its design patterns, and extend some functionalities of it. At the end, we pick up a open-sourced music player, figure out how Android works from scratch, add a shortcut for that app in home screen, and add a panel for users to determine the behavior of playlist randomness: “default”, “shuffle”, or “not shuffle”.

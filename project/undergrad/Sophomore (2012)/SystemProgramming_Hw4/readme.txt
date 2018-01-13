@@ -1,3 +1,3 @@
 System Programming Homework 4
-Dec 2012 - Jan 2013
-It is the most challenging homework I encountered this semester. I am asked to calculate the smallest element given a list of numbers using multi-processes. In other words, I will fork many processes in the beginning and merge the results from them step by step. The largest obstacle for me is finding a way to process inputs from different processes synchronously. At the end, “epoll” with “non-blocking” argument sorts everything out.
+Jun 2013 - Jun 2013
+It is the most challenging homework I encountered this semester. I am asked to calculate the smallest element given a list of numbers using multi-processes. In other words, I will fork many processes in the beginning and merge the results from them step by step. The largest obstacle for me is finding a way to process inputs from different processes synchronously. At the end, `epoll` with “non-blocking” argument sorts everything out.

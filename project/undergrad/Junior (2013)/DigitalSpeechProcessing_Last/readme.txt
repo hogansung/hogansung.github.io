@@ -1,0 +1,3 @@
+Digital Speech Processing Final Project
+May 2014 - Jun 2014
+For the final project, I work on reading one classical paper in speech recognition: `Machine Learning Paradigms for Speech Recognition: An Overview`, which gives me a clearer big picture of what researches have been done before. Some known solutions include: generative learning, discriminative learning, supervised learning, unsupervised learning, semi-supervised learning, active learning, transfer learning, and deep learning.

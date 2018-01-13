@@ -1,3 +1,3 @@
 Digital Speech Processing Homework 1
-Sep 2013 - Jan 2014
-HTML5 Bones, an ongoing project that provides a set of files that can either be used as templates or as guides on how to use some of the new HTML5 elements. The source is also available on GitHub.
+Feb 2014 - Mar 2014
+I am asked to implement Hidden Markov Model (HMM) and try different initial state in order to achieve better model performance. From the experiment, one can tell that both the number of iterations and the number of status have a great influence on the final learning result. At the end, my model is able to achieve 0.87 accuracy with 1000 iterations.

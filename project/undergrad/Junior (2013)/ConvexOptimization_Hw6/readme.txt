@@ -1,0 +1,3 @@
+Convex Optimization Homework 6
+May 2014 - Jun 2014
+This homework asks me to implement newton method with a relative fast calculation. In the beginning, I try to simply run my calculation with parallel calculation in C++; however, it takes around `23916.17` CPU time. Later, I use C++ with `blas` library, which allows me to implement newton method using matrix calculation. At the end, it runs with only `6535.63` CPU time, which is almost one-fourth the time I spend in my first trial.

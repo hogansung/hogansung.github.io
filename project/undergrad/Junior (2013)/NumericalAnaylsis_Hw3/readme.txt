@@ -1,0 +1,3 @@
+Numerical Analysis Homework 3
+Mar 2014 - Mar 2014
+There are two parts in this homework. Firstly, examine the behavior of minimum double value and maximum double value, i.e. make minimum value smaller and maximum value larger. Secondly, examine the performance of for loop with different implementations. At the end, it turns out that MATLAB with built-in `blas` library has much better performance compared to others.

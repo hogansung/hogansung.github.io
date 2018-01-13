@@ -1,0 +1,3 @@
+Media Security Homework 1
+Sep 2013 - Nov 2013
+In the project, I am working on implementing different watermark systems on image and testing whether they are attack-proof. To embed hidden information, I need to 1) transfer images from RGB domain to YCBCR domain, 2) transfer images to frequency domain using Discrete Cosine Transform (DCT) and find out `n` blocks with highest frequency to hide information. It turns out that the watermark can survive attacks, such as blurring, collusion, cropping, dither, compression, noise, rotation, and scaling.

@@ -1,3 +1,3 @@
-Media Security Final Project - Attack at cloud encryption
+Media Security Final Project - Attack a Well-Known Cloud Encryption Algorithm
 Sep 2013 - Jan 2014
-HTML5 Bones, an ongoing project that provides a set of files that can either be used as templates or as guides on how to use some of the new HTML5 elements. The source is also available on GitHub.
+After some researches, my teammate and I find out that a serial of published papers use a flawed algorithm, which can be attacked, to encrypt their cloud data. To prove our correctness, we simulate the whole algorithm and crack the hidden information once we collect enough encrypted objects. Professor is really satisfied with our conclusion and encourages us to fix the problem and publish a paper about it.

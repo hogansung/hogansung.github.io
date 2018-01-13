@@ -1,3 +1,3 @@
 Computer Network Homework 1
 Oct 2013 - Nov 2013
-HTML5 Bones, an ongoing project that provides a set of files that can either be used as templates or as guides on how to use some of the new HTML5 elements. The source is also available on GitHub.
+In this homework, I have three components: server, client, and executor. For server, I use  `epoll` to ensure its ability to work with multiple clients. For client, I also use `epoll`, so that it can take care of the feedbacks from server as well as standard inputs at the same time. At the end, I make the executor slightly more complicated, which can execute the given commands recursively from server.

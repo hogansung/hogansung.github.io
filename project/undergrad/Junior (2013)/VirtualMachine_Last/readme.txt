@@ -1,0 +1,3 @@
+Virtual Machine Final Project
+Nov 2013 - Jan 2014
+My teammate and I decide to study a sub-field in virtual machine — memory management. Existing solutions can be categorized into different groups based on several standards: 1) memory reclamation or memory sharing in terms of mechanism, 2) memory utilization or memory isolation in terms of emphasis phase, and 3) whether there is modification in guest OS or not. We do a thorough research and present our survey in slides.
