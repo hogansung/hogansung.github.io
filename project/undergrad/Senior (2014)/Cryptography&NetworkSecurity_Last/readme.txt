@@ -1,0 +1,3 @@
+Cryptography and Network Security Final Project
+May 2015 - Jun 2015
+In this project, my teammates and I want to research a relatively new security vulnerability in bash: Shellshock. According our survey, this vulnerability is most exploited in Common Gateway Interface-based (CGI-based) web server, Dynamic Host Configuration Protocol (DHCP), and Limited OpenSSH servers. To present this vulnerability, we build up a website based on CGI and gain the shell permission by sending a specific request to server.

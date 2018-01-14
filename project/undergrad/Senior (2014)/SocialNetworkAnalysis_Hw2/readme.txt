@@ -1,0 +1,3 @@
+Social Network and Analysis Homework 2
+Nov 2014 - Dec 2014
+This homework is about predicting the existence of edges. In the training data, one is given some pair of nodes, which indicates the existing nodes in the network. Later, we are asked to predict whether there is edge for a pair of given node or not. There are many strategies for this kind of problem. At the end, we decide to regard this task as a general machine learning problem. In other words, we extract features from nodes and edges and the target is just a boolean value indicates the existence of edge. The main takeaway from this project is about the importance of “proper negative samplings”. One must generate negative samples around given positive samples.

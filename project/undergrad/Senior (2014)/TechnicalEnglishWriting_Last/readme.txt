@@ -1,0 +1,3 @@
+Technical English Writing Final Project
+Sep 2014 - Jan 2015
+For this paper writing practice project, I cooperate with one of my classmates, Su-horng, on a functional language topic: locally relax the value restriction by control flow analysis. In this course, we are asked to write each part of the paper step-by-step, from abstract, motivation, methodology, evaluation, experiment, and conclusion. At the end, we encounter some technical issues and do not finish the implementation of proposed solution.

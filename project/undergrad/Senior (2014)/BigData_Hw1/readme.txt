@@ -1,0 +1,3 @@
+Big Data: Language, Compile, and Application Homework 1
+Feb 2015 - Mar 2015
+In this project, I am given a problem, which can be solved with either general machine learning models: Support Vector Machine (SVM), Random Forest (RF), or Gradient Boosting Machine (GBM), or collaborative models: Matrix Factorization (MF) or Tensor Decomposition (TD). At the end, I decide to work on TD model and generate all required statistic results in my report.

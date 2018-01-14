@@ -1,0 +1,3 @@
+Social Network and Analysis Final Project
+Dec 2014 - Jan 2015
+In the final project, my teammates and I want to have a deeper research regarding to a question about link prediction: how’s the importance of geography information, such as location and graph features. We use two famous social network from Stanford database: Gowalla and Brightkite. The features we take into consider can be categories into three main groups: old location features (common locations + location entropy), graph features (jacquard coefficient + summation of inverted node degrees), and new location features (weighed place features with log distance). At the end, we conclude that model with those new added features have better performance.

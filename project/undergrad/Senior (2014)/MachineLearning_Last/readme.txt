@@ -1,3 +1,3 @@
 Machine Learning Final Project
 Sep 2014 - Jan 2015
-HTML5 Bones, an ongoing project that provides a set of files that can either be used as templates or as guides on how to use some of the new HTML5 elements. The source is also available on GitHub.
+Before this project starts, each student is asked to write each Chinese Zodiac word ten times. After that, these handwriting images are collected as data for this project. As one can imagine, these written words might be tilted or not centered. Thus, we use a preprocessing pipeline to deal with as much as corner case as we can: image blurring, image intensifying, box bounding, then picture resizing. After that, we try different types of learning model, including tree-based models, kernel-based models, deep-learning models, cost sensitive models, and one-to-one learning models. At the end, model ensemble is also used to further improve the final submission score.

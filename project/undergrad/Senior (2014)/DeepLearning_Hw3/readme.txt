@@ -1,0 +1,3 @@
+Deep Learning Homework 3
+Apr 2015 - May 2015
+We are given a raw dataset in xml formats. Thus, we not only need to work on preprocessing, such as deleting headers, punctuations, and special characters, but also make use of some existing library, ex: NTLK in Python and `word2vec`, to do the advanced parsing. There are three proposed solutions from us, including Random Guess, Cosine Similarity Word-wise Evaluation, and Recurrent Neural Network Language Model (RNNLM); unfortunately, at the end, we only have the results of the former two solutions.

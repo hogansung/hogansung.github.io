@@ -1,0 +1,3 @@
+Deep Learning Homework 2
+Mar 2015 - Apr 2015
+In this project, the given data is multiple sequential sound records. In other words, feature `x` is a vector of length `k`; while `y` is a scalar label. There are some known solutions to this kind of learning problem, including structured Support Vector Machine, Deep Learning with Hidden Markov Model, and Recurrent Neural Network. We put experiments on all of them with different loss functions and record their results in report.

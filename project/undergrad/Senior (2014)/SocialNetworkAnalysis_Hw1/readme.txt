@@ -1,0 +1,3 @@
+Social Network and Analysis Homework 1
+Oct 2014 - Nov 2014
+In this project, we are going to play a game in a predefined network; while all information are hidden. Initially, two players is in charge of a fixed amount of nodes randomly. Later on, players will extend the influence from existing nodes across the network based on their derived algorithm round by round. At the end, who occupies the most nodes is the winner. Each team will pair with all other teams and the project score will be based on the competition performance. Our trials include revised PageRank, Two-layer searching, and Two-layer searching with greedy. It turns out that our model performance wins the second place around all classmates.
