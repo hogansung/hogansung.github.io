@@ -1,0 +1,3 @@
+Neural Networks and Pattern Recognition Homework 4
+Feb 2017 - Mar 2017
+In this final homework, we are going to use recurrent network to learn and create a song from scratch. There are some hyper parameters that we have turned for a while, including the temperature of the deep learning model, number of neurons in hidden layer, dropout rate, and different optimizers. For model training strategy, one can decide the sequence length and batch size. At the end, incremental sequence length allows us to achieve 52% accuracy with training data and over 51% accuracy in validation data. Apart from that, RMSprop optimizer converges faster than Adagrad optimizer. All generated music tags, sheet music, and codes are included in the report.

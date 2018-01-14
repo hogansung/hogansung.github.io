@@ -1,0 +1,3 @@
+Neural Networks and Pattern Recognition Homework 2
+Feb 2017 - Feb 2017
+For the individual written part, I am asked to derive the back-propagation update formulas for multiple single variables and as a matrix. For the team programming part, we are required to implement a neural network in Python from scratch and work on a learning problem to verify our derived update formulas. Experiment results and codes are included in report.

@@ -1,0 +1,3 @@
+Computer Vision II Homework 4
+Feb 2017 - Feb 2017
+From Hw1, I have detected the corner and matching between two 2D images. Now, my task is to find out the projection matrix to map 2D points in first image to second image. To fulfill this task, I need to further run outlier rejections, linear estimation, non-linear estimation. For outliner rejections, I still use the mSAC algorithm mentioned in last homework. For linear estimation, I use Direct Linear Transformation (DLT) algorithm to have a closer estimation of projection matrix. After that, I use LM algorithm again with Sampson correction to do non-linear estimation and further reduce the RMSE from 0.594105 to 0.593554.

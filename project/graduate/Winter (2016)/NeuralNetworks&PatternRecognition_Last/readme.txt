@@ -1,0 +1,3 @@
+Neural Networks and Pattern Recognition Final Report
+Feb 2017 - Mar 2017
+In this project, we are interested in one of the hottest topics related to deep learning recently: conditional Generative Adversarial Network (cGAN), and try to add some stochasticity of it. Since it is a very recent work, we spend much time in collecting related information and trying to fully understand those papers. Later, we take the cityscapes dataset for result replication and baseline testing and reproduce most of the previous work. We not only use that that model to do transfer learning on Chinese numbers, but also add some regularizations on it to further improve its performance.

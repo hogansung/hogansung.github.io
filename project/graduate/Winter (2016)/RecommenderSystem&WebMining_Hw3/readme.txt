@@ -1,0 +1,3 @@
+Recommendation System and Web Mining Homework 3
+Feb 2017 - Feb 2017
+There are two tasks need to be fulfilled in this homework. Firstly, helpfulness prediction is a supervised learning task, where target value is a boolean value. One can tell that the more predictors are used, the better the model performance is. Secondly, rating prediction is another supervised learning task with ratings ranging from one star to five stars. Similar, using more predictors can efficiently reduce the model error; however, proper regularization also plays an important role here. Experiment results and codes are included in the report.

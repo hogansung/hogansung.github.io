@@ -1,0 +1,3 @@
+Recommendation System and Web Mining Homework 4
+Feb 2017 - Mar 2017
+In this homework, I need to work on five thousand reviews and train a proper model using those data. With my supervised learning experiment, using one thousand most frequent unigrams and bigrams can effectively reduce the MRE score to 0.289548. Besides that, with Term Frequency - Inverse Document Frequency (tf-idf) features, I can further reduce the MRE score to 0.278760. Experiment results and codes are attached in the report.

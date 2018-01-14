@@ -1,0 +1,3 @@
+Recommendation System and Web Mining Assignment 1
+Feb 2017 - Feb 2017
+This assignment is an extended competition from Hw3. I basically need to use some more complicated model to further improve my model performance. For both helpfulness and rating prediction tasks, I decide to use Matrix Factorization (MF) model with Alternating Least Square (ALS) learning approach. Initially, I use only a predicator and biased term for users and items. Later, I add in two matrices `P` and `Q` for the interaction between users and items. Apart from that, I also add temporal time stamp term; unfortunately, it does not further improve my model. Experiment results and codes are included in the report.

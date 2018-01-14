@@ -11,7 +11,7 @@ targets = {
     'Graduate Project': {
         'target_file': '../project_graduate.html',
         'target_folder': '../project/graduate',
-        'target_sub_folders': ['Fall (2016)', 'Winter (2016)', 'Spring (2017)', 'Fall (2017)'],
+        'target_sub_folders': ['Fall (2016)', 'Winter (2016)', 'Spring (2016)', 'Fall (2017)'],
     },
 }
 

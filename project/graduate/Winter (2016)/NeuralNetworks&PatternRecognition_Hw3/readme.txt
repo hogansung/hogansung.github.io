@@ -1,0 +1,3 @@
+Neural Networks and Pattern Recognition Homework 3
+Feb 2017 - Feb 2017
+In this homework, we are given some pre-trained deep learning models, such as VGG16, to work on other image classification tasks, including Caltech256 and Urban Tribes. To prevent train the whole hidden neurons and links in VGG16 again, we have a surgery on VGG16: replace the last neuron layer with brand new neurons and train on these neurons. On top of that, professor also asks us to examine the learning results inside the model, for example, drawing some feature maps in an intermediate level or predicting the results by removing some intermediate layers. Experiment results and codes are attached in the report.

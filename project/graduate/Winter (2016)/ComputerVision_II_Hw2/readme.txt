@@ -1,0 +1,3 @@
+Computer Vision II Homework 2
+Feb 2017 - Feb 2017
+In this homework, we are given two sets of points, 3D points in real world and 2D points in a camera image, and their correspondence. Our task is find out the camera projection matrix with both linear estimation and non-linear estimation. Linear estimation is quite straightforward; however, the error is 9.1697 in denormalized space. For nonlinear estimation, its approximation is done iteratively. At the end, its result is better than linear estimation, which is 9.0996 in denormalized space.

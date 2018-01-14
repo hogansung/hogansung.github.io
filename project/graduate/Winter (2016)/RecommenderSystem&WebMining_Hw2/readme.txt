@@ -1,0 +1,3 @@
+Recommendation System and Web Mining Homework 2
+Jan 2017 - Feb 2017
+There are three main tasks in this homework. Firstly, I need to train multiple models with different regularization coefficients and report their results. Secondly, results for precision and recall with different thresholds are required. At the end, explained variance with various number of components from Principle Component Analysis is also required. Experiment results and codes are included in the report.

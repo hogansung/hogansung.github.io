@@ -1,0 +1,3 @@
+Computer Vision II Homework 1
+Jan 2017 - Jan 2017
+For the written part of this homework, I need to calculate the intersection between a line and a plane and between a line and a quadric. For the programming part, I am given two images with slightly shift. I need to redo what I have done in one of my homeworks in last quarter: feature detection — corner detection and feature matching. The results and codes are included in report.

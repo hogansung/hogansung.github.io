@@ -1,0 +1,3 @@
+Computer Vision II Homework 5
+Mar 2017 - Mar 2017
+In the written part, I am asked to calculate the closet point on a line to origin. In the programming part, I need to find out the fundamental matrix with following steps: feature detection, feature matching, outlier rejection, linear estimation, and non-linear estimation. The former three parts are very similar to what I have done in previous homework. For the latter two parts, I again use DLT and LM algorithms but with slightly changes. At the end, RMSE is reduced from 349.808732 to 353.785430.
