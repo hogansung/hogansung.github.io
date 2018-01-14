@@ -1,0 +1,3 @@
+Computer Vision I Homework 4
+Nov 2016 - Jan 2017
+For the written part, one is asked to work on nearest neighbor algorithm, and Principle Component Analysis (PCA). Later on, naive recognition, k-Nearest Neighbor (k-NN) recognition, Eigenfaces recognition, and Fisherfaces recognition are required separately. It is interesting that for eigenfaces recognition, dropping top four eigenvfaces actually induce better learning results. This might be caused by the limited information provided in first four eigenfaces. At the end, we find out that eigenfaces usually have better performance than the other three methods. Codes are attached in the report.

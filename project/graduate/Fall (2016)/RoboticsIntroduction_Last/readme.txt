@@ -1,0 +1,3 @@
+Robotics Introduction Final Project
+Oct 2016 - Dec 2016
+For this robotics project, we want to derive a robot that can sort out a set of messy objects by their color. To fulfill this functionality, we spent lots of time in tuning the color detection parameters on Robotics Operation System (ROS). Besides that, it is also very challenging for robot to work straight, because the lack of calibration. It turns out that we need to rely on the feedbacks from vision to adjust the robot directions every few frames. At the end, since we need to physically move objects around, we have to do many trial-and-errors in order to improve robot’s mobility. Our demo is demonstrated as video available for everyone to download.

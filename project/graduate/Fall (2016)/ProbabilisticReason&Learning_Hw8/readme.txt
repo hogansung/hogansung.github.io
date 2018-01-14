@@ -1,0 +1,3 @@
+Probabilistic Reasoning and Learning Homework 8
+Nov 2016 - Nov 2016
+In the last homework, I an calculating the results for a real application with both value iteration and policy iteration. In that application, I need to find a way to derive an algorithm to leave a dungeon made by obstacles `#`. Other than that, convergence for iterative policy evaluation is calculated. Codes are also attached in report.

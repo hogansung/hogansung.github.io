@@ -1,0 +1,3 @@
+Probabilistic Reasoning and Learning Homework 5
+Oct 2016 - Nov 2016
+This homework is mainly about gradient based learning, either first-order gradient or Newton’s Method. I am asked to derive the converging speed and error bounds. After that, two real applications — stock market prediction and handwritten digit classification problems — are given for us to practice. The experiment results and codes are written in report.
