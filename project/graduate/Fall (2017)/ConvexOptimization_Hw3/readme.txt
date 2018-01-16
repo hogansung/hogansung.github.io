@@ -1,0 +1,3 @@
+Convex Optimization Homework 3
+Nov 2017 - Nov 2017
+The first part of this homework is problems extracted from textbook. They are mainly about  log-concavity of Gaussian cumulative function, solving optimization problems with constraints, simplification of general optimization problems to specific quadratic problems, and generalized posynomials and geometric programming. Later on, for the second of the homework, I need to solve a predefined maximum flow problem by solving a constrained optimization problem.

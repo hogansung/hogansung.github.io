@@ -1,0 +1,3 @@
+Operating System Quarter Project
+Mar 2017 - Jun 2017
+In this quarter project, we are asked to do a detailed analysis for an operating system in different aspects. For CPU and scheduling, we need to estimate the overheads for procedure calls and system calls, task creation time, and context switch time. For memory, we have to calculate Random Access Memory (RAM) access time, RAM bandwidth, and page fault service time. For network, we use a Linux computer and a MacBook Pro to test round trip time, peak bandwidth, and connection overhead. For file system, size of file cache, file read time, remote file read time, and contention are measured with different file sizes. All detailed statistics are included in the report.

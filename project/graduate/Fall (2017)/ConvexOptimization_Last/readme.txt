@@ -1,0 +1,3 @@
+Convex Optimization Final Project
+Nov 2017 - Dec 2017
+We take one of the machine learning task from Kaggle, house price prediction, as the topic of this final project. One of the main reasons is that the provided dataset is relatively easy to parse and manipulate. It turns out that we have much time to do a thorough feature analysis for both numerical and categorical features, which provides a better intuition to how to manipulate features. On top of that, we also spend lots of time trying different types of models, from Linear Regression, Random Forest Regressor, Gradient Boosting Regressor, Deep Learning Model, and Support Vector Regressor (SVR). At the end, our experiment results show that SVR has the best result in terms of submission score.

@@ -1,0 +1,3 @@
+Latent Variable Final Project
+Apr 2017 - Jun 2017
+In this project, we want to do some research on restaurant rating system with temporal dynamics. For the experiment dataset, we directly adapt Yelp Competition Dataset for restaurants. After some analysis, we find out there is a quite significant pattern for both restaurant ratings and user ratings over months every year. At the end, we use Dynamic Time Warping (DTW) algorithm to cluster users and restaurants and run Matrix Factorization (MF) with and without time information. Unfortunately, our experiment does not show a very clear advantage of using time related information. We believe it is caused by either the improper clustering approach or sparsity of Yelp data. Pseudo codes are included in the report.

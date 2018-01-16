@@ -1,0 +1,3 @@
+Operating System Homework 1
+Mar 2017 - Apr 2017
+There are three parts in this homework. In the first part, I need to compare the details between different systems, including Hydra, Multics, Unix, and Pilot. Last, I am asked to provide an operating system example that takes advantage of specialized hardware. Lastly, the question is about the reason for existence of multi-user timesharing system, like Unix or our PCs.

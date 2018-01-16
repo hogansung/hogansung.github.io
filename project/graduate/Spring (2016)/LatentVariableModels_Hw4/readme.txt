@@ -1,0 +1,3 @@
+Latent Variable Homework 4
+May 2017 - Jun 2017
+There are three parts in this homework. Firstly, I work on Markov Random Field and derive the update rules with evidence lower bound (ELBO). Secondly, I use the conclusion from previous derivations and implement Gibbs Sampling and Mean Field Algorithm, both of who take a noisy picture as input and output a denoised picture. Lastly, I am given a problem statement and asked to model it with Markov logic rules with proper update rules. Codes are included in the report.

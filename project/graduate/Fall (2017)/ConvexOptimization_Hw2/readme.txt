@@ -1,0 +1,3 @@
+Convex Optimization Homework 2
+Oct 2017 - Nov 2017
+For the first part of this homework, I am asked some questions about Kullback-Leibler divergence and the differentiation between convex, concave, quasiconvex, and quasi concave functions. For the second part, I need to derive the update for log-sum-exp formula and implement a simple function to simulate Least Action principle in Physics with cvx package in MATLAB. Experiment results and codes are included in the report.
