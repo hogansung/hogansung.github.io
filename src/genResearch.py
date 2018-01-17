@@ -206,10 +206,10 @@ def getContent(name, target_folder, target_sub_folders):
 '''
             
             if link:
-                s += '''                    <p> <strong>Link:</strong> <a href="''' + link + '''" target="_blank">''' + link + '''</a> </p>
+                s += '''                    <p> <strong>Paper:</strong> <a href="''' + link + '''" target="_blank">''' + link + '''</a> </p>
 '''
             else:
-                s += '''                    <p> <strong>Link:</strong> Not available </p>
+                s += '''                    <p> <strong>Paper:</strong> Not available </p>
 '''
 
             if report_link:

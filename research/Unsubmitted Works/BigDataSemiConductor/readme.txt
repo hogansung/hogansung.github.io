@@ -1,3 +1,4 @@
-Big Data TSMC Semi-conductor Formal Competition
+Big Data TSMC Semi-conductor Competition
 Dec 2014 - Feb 2015
-HTML5 Bones, an ongoing project that provides a set of files that can either be used as templates or as guides on how to use some of the new HTML5 elements. The source is also available on GitHub.
+Semiconductor is the foundation of modern embedded systems. In this high computation power era, the circuit probing value of semiconductor production is widely concerned. In this series of competition held by TSMC, we have more than 100,000 features by hand. Thus, the feature dimension reduction is a very key procedure for us. On top of that, since the storage of dataset itself exceeds the memory capacity on one single computer, we need to figure out a way to extract features from partial data each time and merge them afterwards. We derive a chain of preprocessing, model learning, and model prediction. Furthermore, we have a deep observation into the importance of each feature and give detailed explanation and discussion in this report.
+Big Data, Semiconductor Manufacturing

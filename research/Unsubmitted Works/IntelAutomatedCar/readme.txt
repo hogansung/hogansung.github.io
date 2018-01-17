@@ -1,0 +1,4 @@
+Driving Behavior Prediction, Intel-NTU
+May 2015 - Sep 2015
+Given a set of driver logs collected from Unity simulator, our task is to predict driver’s aggressive events, including overspending, driving too close, lane switch to left, and lane switch to right in the near future (10 secs). By achieving this goal in real time with the assumption of effective communication between cars, we can alert driver whenever any other driver with previous accident records nearby is going to have aggressive actions. For feature engineering, we use both long-term and short-term features, such as car speeds, distance between cars, and steering angles, to train our model. To showcase our project on Intel Asia Summit 2015, we not only prepare a poster and presentation slides, but also implement a Graphical User Interface (GUI) with Python to demonstrate our model predictions.
+Driving Behavior Prediction, Unity Simulation, Intel Asia Summit 2015, Python GUI

@@ -1,0 +1,4 @@
+SB Hackathon, University of California, Santa Barbara
+Jan 2017 - Jan 2017
+During this Hackathon, we are working on an advertisement related machine learning topic: predict the possibility of conversion (click on an advertisement and buy the item) given logs of past users’ behaviors. It is unlike usual collaborative filtering task, where only interactions, ex: ratings, are provided; on the contrary, many contents of users and items are also included. It turns out that we have to derive a new framework to learn both rating-based information and content-based information at the same time. During the Hackathon, we implemented a set of mixed updating rules for our model; unfortunately, the performance is still far from satisfaction because of the lack of time.
+Advertisement, Conversion, Collaborative Model, Rating-based Model, Content-based Model
