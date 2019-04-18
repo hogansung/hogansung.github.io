@@ -13,7 +13,7 @@ PREVIEW_LIMIT = 250
 
 def cleanArticle():
     fileNames = os.listdir('../article-pages/')
-    articleNames = filter(lambda x: x.find('article') >= 0, fileNames)
+    articleNames = [x for x in fileNames if x.find('article') >= 0]
 
     for articleName in articleNames:
         os.remove(os.path.join('../article-pages/', articleName))
@@ -190,7 +190,7 @@ def getContent(prefix, suffix):
 '''
 
     folderNames = os.listdir(target_folder)
-    folderNames = filter(lambda x: x[0] != '.', folderNames)
+    folderNames = [x for x in folderNames if x[0] != '.']
 
     # sort documents with mtime
     articleInfo = []

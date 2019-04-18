@@ -24,11 +24,11 @@ def main():
         ratio = target['ratio']
 
         fds = os.listdir(target_folder)
-        fds = filter(lambda x: x[0] != '.', fds)
+        fds = [x for x in fds if x[0] != '.']
         
         for fd in fds:
             sfds = os.listdir(os.path.join(target_folder, fd))
-            sfds = filter(lambda x: x[0] != '.', sfds)
+            sfds = [x for x in sfds if x[0] != '.']
 
             for sfd in sfds:
                 f = os.path.join(target_folder, fd, sfd, 'report.pdf')
@@ -45,8 +45,8 @@ def main():
 
                 with Image(one_page) as pg:
                     pg.format = 'jpeg'
-                    width = long(pg.width * ratio)
-                    height = long(pg.height * ratio)
+                    width = int(pg.width * ratio)
+                    height = int(pg.height * ratio)
                     pg.resize(width, height)
                     pg.background_color = Color('white')
                     pg.alpha_channel = 'remove'

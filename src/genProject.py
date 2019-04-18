@@ -106,7 +106,7 @@ def getContent(name, target_folder, target_sub_folders):
             continue
 
         folderNames = os.listdir(os.path.join(target_folder, target_sub_folder))
-        folderNames = filter(lambda x: x[0] != '.' and x[0] != '_', folderNames)
+        folderNames = [x for x in folderNames if x[0] != '.' and x[0] != '_']
 
         s += '''
             <div class="row">
@@ -122,26 +122,26 @@ def getContent(name, target_folder, target_sub_folders):
         for folderName in folderNames:
             projName = os.path.join(target_folder, target_sub_folder, folderName)
             fileNames = os.listdir(projName)
-            fileNames = filter(lambda x: x[0] != '.', fileNames)
+            fileNames = [x for x in fileNames if x[0] != '.']
 
             try:
-                reportPath = os.path.join(projName, filter(lambda x: x.find('report') >= 0, fileNames)[0])
+                reportPath = os.path.join(projName, [x for x in fileNames if x.find('report') >= 0][0])
             except:
                 # reportPath = default_report
                 continue
 
             try:
-                readmePath = os.path.join(projName, filter(lambda x: x.find('readme') >= 0, fileNames)[0])
+                readmePath = os.path.join(projName, [x for x in fileNames if x.find('readme') >= 0][0])
             except:
                 readmePath = default_readme
 
             try:
-                imagePath = os.path.join(projName, filter(lambda x: x.find('jpg') >= 0, fileNames)[0])
+                imagePath = os.path.join(projName, [x for x in fileNames if x.find('jpg') >= 0][0])
             except:
                 imagePath = default_image
 
             try:
-                videoPath = os.path.join(projName, filter(lambda x: x.find('video') >= 0, fileNames)[0])
+                videoPath = os.path.join(projName, [x for x in fileNames if x.find('video') >= 0][0])
             except:
                 videoPath = None
 
@@ -156,7 +156,7 @@ def getContent(name, target_folder, target_sub_folders):
             rel_imagePath = str(pathlib.Path(*image_p.parts[1:]))
 
             # hack: deal with media
-            medias = filter(lambda x: x.find('video') >= 0, fileNames)
+            medias = [x for x in fileNames if x.find('video') >= 0]
             if len(medias) > 0:
                 with open(os.path.join(projName, 'media.html'), 'w') as f:
                     f.write('''<!DOCTYPE html>
@@ -221,7 +221,7 @@ def main():
     prefix = getPrefix()
     suffix = getSuffix()
 
-    for key, value in targets.items():
+    for key, value in list(targets.items()):
         with open(value['target_file'], 'w') as f:
             content = getContent(key, value['target_folder'], value['target_sub_folders'])
             f.write(prefix + content + suffix)
