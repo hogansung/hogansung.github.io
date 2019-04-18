@@ -195,7 +195,7 @@ def getContent(name, target_folder, target_sub_folders):
                 s += '''                    <a>
 '''
 
-            s += '''                        <img class="img-responsive" src="''' + rel_imagePath + '''" alt="Image missing">
+            s += '''                        <img class="img-fluid" src="''' + rel_imagePath + '''" alt="Image missing">
                     </a>
                 </div>
                 <div class="col-md-7 ">

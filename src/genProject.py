@@ -105,7 +105,7 @@ def getContent(name, target_folder, target_sub_folders):
         if not os.path.exists(os.path.join(target_folder, target_sub_folder)):
             continue
 
-        folderNames = os.listdir(os.path.join(target_folder, target_sub_folder))
+        folderNames = sorted(os.listdir(os.path.join(target_folder, target_sub_folder)))
         folderNames = [x for x in folderNames if x[0] != '.' and x[0] != '_']
 
         s += '''
@@ -173,12 +173,12 @@ def getContent(name, target_folder, target_sub_folders):
 
             s += '''            
             <div class="row align-items-center">
-                <div class="col-md-3 ">
+                <div class="col-md-4 ">
                     <a target="_blank" href="''' + rel_reportPath + '''">
-                        <img class="img-responsive" src="''' + rel_imagePath + '''" alt="Image missing">
+                        <img class="img-fluid" src="''' + rel_imagePath + '''" alt="Image missing">
                     </a>
                 </div><!--
-                --><div class="col-md-9 ">
+                --><div class="col-md-8 ">
                     <h4> ''' + t + ''' </h4>
                     <h5> <i> ''' + st + ''' </i> </h5>
                     <p> ''' + cnt + ''' </p>

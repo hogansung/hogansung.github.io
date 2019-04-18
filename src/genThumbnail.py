@@ -10,7 +10,7 @@ targets = [
     },
     {
         'target_folder': '../project/graduate',
-        'ratio': 0.3,
+        'ratio': 0.6,
     },
     {
         'target_folder': '../research',

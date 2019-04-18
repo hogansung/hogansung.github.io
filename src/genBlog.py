@@ -6,7 +6,7 @@ import hashlib
 
 target_file = '../blog.html'
 target_folder = '../blog/'
-PREVIEW_LIMIT = 250
+PREVIEW_LIMIT = 295
 
 # s/!\[\](\(.*\))/<img\ src="\1"\ alt="Image Missing"\ style="width:\ 200px;"\/>/g
 
@@ -236,8 +236,8 @@ def getContent(prefix, suffix):
         s += '''
             <div class="row">
                 <div class="col-md-12">
-                    <h3> ''' + t + ''' </h3>
-                    <h4> ''' + st + ''' </h4>
+                    <h4> ''' + t + ''' </h4>
+                    <h5><i> ''' + st + ''' </i></h5>
                     <p> ''' + gs[:PREVIEW_LIMIT]
                     
         if len(gs) > PREVIEW_LIMIT:
