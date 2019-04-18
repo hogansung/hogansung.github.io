@@ -273,7 +273,7 @@ def getContent(prefix, suffix):
                     <h2> ''' + t + ''' </h2>
                     <h3> ''' + st + ''' </h3>
                     <br>
-                    <p align="right"> <span class="glyphicon glyphicon-pencil"></span> ''' + ' Last edited on ' + mtime + ''' </p>
+                    <p align="right"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> ''' + ' Last edited on ' + mtime + ''' </p>
 
                     <hr>
                 </div>

@@ -1,7 +1,6 @@
 {
   "name": "bootstrap-social",
-  "version": "4.9.1",
-  "main": "bootstrap-social.css",
+  "version": "5.1.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/lipis/bootstrap-social.git"
@@ -9,6 +8,6 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "~3",
-    "font-awesome": "~4.3"
+    "font-awesome": "~4.7"
   }
 }
