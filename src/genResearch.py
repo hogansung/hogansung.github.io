@@ -49,9 +49,9 @@ def getPrefix():
         <link href="src/css/manual.css" rel="stylesheet">
     </head>
 
-    <body style="padding:70px; background-color: rgba(240, 250, 240, 0.3)">
+    <body style="padding:100px; background-color: rgba(240, 250, 240, 0.3)">
         <!-- Fixed navbar -->
-        <nav class="navbar navbar-expand-lg fixed-top navbar-default bg-light">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-default bg-dark">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">Hao-en Sung (Hogan)</a>
