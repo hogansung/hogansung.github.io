@@ -24,3 +24,19 @@ p.auto {
     margin-right: auto;
     display: block
 }
+
+.index-full {
+    background: url("../../images/stay_foolish-wallpaper-1920x1080.jpg") no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.normal-full {
+    background: url("../../images/lone_tree-wallpaper-1920x1200_op50.jpg") no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}

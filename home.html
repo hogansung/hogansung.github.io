@@ -18,28 +18,28 @@
         <link href="src/css/manual.css" rel="stylesheet">
     </head>
 
-    <body style="padding:0; background-color: rgba(240, 250, 240, 0.3)">
+    <body style="padding:70px; background-color: rgba(240, 250, 240, 0.3)">
         <!-- Fixed navbar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-default bg-light">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">Hao-en Sung (Hogan)</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="home.html">HOME</a></li>
-                        <li><a href="blog.html">BLOG</a></li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
+                <div class="collapse navbar-collapse show"  id="navbarNavDropdown">
+                    <ul class="nav navbar-nav ml-auto nav-tabs">
+                        <li class="nav-item"><a class="nav-link active" href="home.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                              <li><a href="project_undergrad.html">Undergrad Project</a></li>
-                              <li><a href="project_graduate.html">Graduate Project</a></li>
+                                <a class="dropdown-item" href="project_undergrad.html">Undergrad Project</a>
+                                <a class="dropdown-item" href="project_graduate.html">Graduate Project</a>
                             </ul>
                         </li>
-                        <li><a href="research.html">RESEARCH</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="research.html">RESEARCH</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -49,6 +49,8 @@
             <div class="page-header">
                 <h2> Home </h2>
             </div>
+
+            <hr>
 
             <div class="row">
                 <div class="col-md-12">
@@ -115,15 +117,11 @@
                     <h3> Edit history </h3>
                     <br>
                     <p> Version 0.0 (2015-08-01): create stable webpage version for graduate school application </p>
-                    
-                    <br>
 
                     <p> Version 1.0 (2016-09-21): migrate from CSIE server to GitHub; redesign webpage framework  </p>
                     <p> Version 1.1 (2016-09-22): update about.html, including adding two pulications, modifying statements, showing percentage in skills, and renewing social links; update home.html: adding Edit History block </p>
                     <p> Version 1.2 (2017-06-21): update publications; update intern experience (Yelp); update school GPA </p>
                     
-                    <br>
-
                     <p> Version 2.0 (2018-01-04): update thumbnails for each project: use MagickWand to extract the first page of every pdf file and transfer them from pdf format into png format; update about.html </p> 
                     <p> Version 2.1 (2018-01-05): re-design the structure of project folder; update description of projects </p>
                     <p> Version 2.2 (2018-01-06): re-design the structure of project folder; add Facebook comment plugin; improve the loading speed of Facebook plugin; improve loading speed of thumbnails - using jpg instead of png </p>

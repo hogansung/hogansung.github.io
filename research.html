@@ -18,28 +18,28 @@
         <link href="src/css/manual.css" rel="stylesheet">
     </head>
 
-    <body style="padding:0; background-color: rgba(240, 250, 240, 0.3)">
+    <body style="padding:70px; background-color: rgba(240, 250, 240, 0.3)">
         <!-- Fixed navbar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-default bg-light">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">Hao-en Sung (Hogan)</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="home.html">HOME</a></li>
-                        <li><a href="blog.html">BLOG</a></li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
+                <div class="collapse navbar-collapse show"  id="navbarNavDropdown">
+                    <ul class="nav navbar-nav ml-auto nav-tabs">
+                        <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                              <li><a href="project_undergrad.html">Undergrad Project</a></li>
-                              <li><a href="project_graduate.html">Graduate Project</a></li>
+                                <a class="dropdown-item" href="project_undergrad.html">Undergrad Project</a>
+                                <a class="dropdown-item" href="project_graduate.html">Graduate Project</a>
                             </ul>
                         </li>
-                        <li class="active"><a href="research.html">RESEARCH</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="research.html">RESEARCH</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -49,6 +49,9 @@
             <div class="page-header">
                 <h2> Research </h2>
             </div>
+
+            <hr>
+
             <div class="row">
                 <div class="col-md-12">
                     <h3 align="center"> Accepted Papers </h3>
@@ -57,13 +60,13 @@
 
             <br>
             
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-5 vcenter">
                     <a target="_blank" href="research/Accepted Papers/sung2017classification/report.pdf">
-                        <img class="img-responsive" src="research/Accepted Papers/sung2017classification/thumbnail.jpg" alt="Image missing">
+                        <img class="img-fluid" src="research/Accepted Papers/sung2017classification/thumbnail.jpg" alt="Image missing">
                     </a>
-                </div><!--
-                --><div class="col-md-7 vcenter">
+                </div>
+                <div class="col-md-7 vcenter">
                     <h4> A Classification model for Diverse and Noisy Labelers </h4>
                     <h5> <i> Feb 2016 - May 2017 </i> </h5>
                     <p class="auto"> <strong>Abstract:</strong> With the popularity of the Internet and crowdsourcing, it becomes easier to obtain labeled data for specific problems. Therefore, learning from data labeled by multiple annotators has become a common scenario these days. Since annotators have different expertise, labels acquired from them might not be perfectly accurate. This paper derives an optimization framework to solve this task through estimating the expertise of each annotator and the labeling difficulty for each instance. In addition, we introduce similarity metric to enable the propagation of annotations between instances. </p>
@@ -88,13 +91,13 @@
 
             <br>
             
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-5 vcenter">
                     <a>
-                        <img class="img-responsive" src="research/Pending Papers (details hidden)/sung2017proximal/thumbnail.jpg" alt="Image missing">
+                        <img class="img-fluid" src="research/Pending Papers (details hidden)/sung2017proximal/thumbnail.jpg" alt="Image missing">
                     </a>
-                </div><!--
-                --><div class="col-md-7 vcenter">
+                </div>
+                    <div class="col-md-7 vcenter">
                     <h4> Two-dimensional Proximal Constraints with Group Lasso for Disease Progression Prediction </h4>
                     <h5> <i> Sep 2015 - Dec 2017 </i> </h5>
                     <p class="auto"> <strong>Abstract:</strong> Despite the advance in medical research, there are still some diseases that cannot be cured after certain level of severity. For instance, Alzheimer’s disease (AD), arguably the best known neurodegenerative disease, attracts significant attention because of its irreversible disease progression. Enormous capital and efforts have been invested into AD research for the pursuit of better prediction on its progression. While there are multiple ways to solve disease progression problem, multitask learning is the predominant strategy due to its strength of sharing partial information across time points to compensate the effect of insufficient data. In this paper, we extend algorithms for disease progression prediction from equipping one-dimensional proximal constraints to two-dimensional ones along with an assumption on the smoothness of features across time points. Our model achieves significant improvement in AD progression prediction on the basis of multitask learning model comparing with the previous works. Beside the empirical improvement, in this paper we provide theoretical analysis to show that the proposed two-dimensional proximal constraints maintains the feasibility of the decomposition procedure on derived optimization. We not only solve L2 norm models optimally, but also provide an approximation solution for models with L1 norm. Our implementation extends MALSAR library package, which is used specifically for multitask learning, and is available online. </p>

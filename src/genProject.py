@@ -41,32 +41,33 @@ def getPrefix():
         <link href="src/css/manual.css" rel="stylesheet">
     </head>
 
-    <body style="padding:0; background-color: rgba(240, 250, 240, 0.3)">
+    <body style="padding:70px; background-color: rgba(240, 250, 240, 0.3)">
         <!-- Fixed navbar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-default bg-light">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">Hao-en Sung (Hogan)</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="home.html">HOME</a></li>
-                        <li><a href="blog.html">BLOG</a></li>
-                        <li class="dropdown active">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
+                <div class="collapse navbar-collapse show"  id="navbarNavDropdown">
+                    <ul class="nav navbar-nav ml-auto nav-tabs">
+                        <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                              <li><a href="project_undergrad.html">Undergrad Project</a></li>
-                              <li><a href="project_graduate.html">Graduate Project</a></li>
+                                <a class="dropdown-item" href="project_undergrad.html">Undergrad Project</a>
+                                <a class="dropdown-item" href="project_graduate.html">Graduate Project</a>
                             </ul>
                         </li>
-                        <li><a href="research.html">RESEARCH</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="research.html">RESEARCH</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
+
 '''
     return s
 
@@ -171,13 +172,13 @@ def getContent(name, target_folder, target_sub_folders):
 ''')
 
             s += '''            
-            <div class="row">
-                <div class="col-md-3 vcenter">
+            <div class="row align-items-center">
+                <div class="col-md-3 ">
                     <a target="_blank" href="''' + rel_reportPath + '''">
                         <img class="img-responsive" src="''' + rel_imagePath + '''" alt="Image missing">
                     </a>
                 </div><!--
-                --><div class="col-md-9 vcenter">
+                --><div class="col-md-9 ">
                     <h4> ''' + t + ''' </h4>
                     <h5> <i> ''' + st + ''' </i> </h5>
                     <p> ''' + cnt + ''' </p>
