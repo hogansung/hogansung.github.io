@@ -30,14 +30,14 @@ def getPrefix():
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Bootstrap core CSS -->
-        <link href="src/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/src/bootstrap/css/bootstrap.css" rel="stylesheet">
 
         <!-- Bootstrap social CSS -->
-        <link href="src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
-        <link href="src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+        <link href="/src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+        <link href="/src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
 
         <!-- Manual CSS -->
-        <link href="src/css/manual.css" rel="stylesheet">
+        <link href="/src/css/manual.css" rel="stylesheet">
     </head>
 
     <body style="padding:100px; background-color: rgba(240, 250, 240, 0.3)">
@@ -51,17 +51,17 @@ def getPrefix():
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse show"  id="navbarNavDropdown">
                     <ul class="nav navbar-nav ml-auto nav-tabs">
-                        <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="blog.html">BLOG</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/home.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/blog.html">BLOG</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle disable" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <a class="dropdown-item" href="project_undergrad.html">Undergrad Project</a>
-                                <a class="dropdown-item" href="project_graduate.html">Graduate Project</a>
+                                <a class="dropdown-item" href="/project_undergrad.html">Undergrad Project</a>
+                                <a class="dropdown-item" href="/project_graduate.html">Graduate Project</a>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="research.html">RESEARCH</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/research.html">RESEARCH</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about.html">ABOUT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -92,17 +92,20 @@ def getPrefix_article():
         <meta property="og:site_name" content="Hogan's Personal Website"/>
 
         <!-- Bootstrap core CSS -->
-        <link href="../src/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/src/bootstrap/css/bootstrap.css" rel="stylesheet">
 
         <!-- Bootstrap social CSS -->
-        <link href="../src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
-        <link href="../src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+        <link href="/src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+        <link href="/src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
 
         <!-- Manual CSS -->
-        <link href="../src/css/manual.css" rel="stylesheet">
+        <link href="/src/css/manual.css" rel="stylesheet">
     </head>
 
     <body style="padding:100px; background-color: rgba(240, 250, 240, 0.3)">
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=158857908084540&autoLogAppEvents=1"></script>
+
         <!-- Fixed navbar -->
         <nav class="navbar navbar-expand-lg fixed-top navbar-default bg-dark">
             <div class="container">
@@ -113,17 +116,17 @@ def getPrefix_article():
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse show"  id="navbarNavDropdown">
                     <ul class="nav navbar-nav ml-auto nav-tabs">
-                        <li class="nav-item"><a class="nav-link" href="../home.html">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="../blog.html">BLOG</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/home.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/blog.html">BLOG</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle disable" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <a class="dropdown-item" href="../project_undergrad.html">Undergrad Project</a>
-                                <a class="dropdown-item" href="../project_graduate.html">Graduate Project</a>
+                                <a class="dropdown-item" href="/project_undergrad.html">Undergrad Project</a>
+                                <a class="dropdown-item" href="/project_graduate.html">Graduate Project</a>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="../research.html">RESEARCH</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/research.html">RESEARCH</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about.html">ABOUT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -136,42 +139,66 @@ def getPrefix_article():
 
 
 def getSuffix():
-    s = '''        </div>
+    s = '''
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3> Number of visits (since 2018/01/01) </h3>
+                    <br>
+                    <div align="left">
+                        <span id='d5' class='visit_count'>0</span>
+                        <span id='d4' class='visit_count'>0</span>
+                        <span id='d3' class='visit_count'>0</span>
+                        <span id='d2' class='visit_count'>0</span>
+                        <span id='d1' class='visit_count'>0</span>
+                        <span id='d0' class='visit_count'>0</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+        </div>
+
+        <!-- Customized JavaScript -->
+        <script src="/src/js/visitor_counter_show.js"></script>
 
         <!-- Bootstrap core JavaScript -->
         <script src="https://code.jquery.com/jquery.min.js"></script>
-        <script src="src/bootstrap/js/bootstrap.js"></script>
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src='https://www.google-analytics.com/analytics.js'></script>
-        <script async src="https://apis.google.com/js/api.js"></script>
-        <script>
-            $(window).bind("load", function() {
-                $.getScript('src/js/social.js', function() {});
-                $.getScript('src/js/analytics.js', function() {});
-            });
-        </script>
+        <script src="/src/bootstrap/js/bootstrap.js"></script>
     </body>
 </html>'''
     return s
 
 
 def getSuffix_article():
-    s = '''        </div>
+    s = '''
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3> Number of visits (since 2018/01/01) </h3>
+                    <br>
+                    <div align="left">
+                        <span id='d5' class='visit_count'>0</span>
+                        <span id='d4' class='visit_count'>0</span>
+                        <span id='d3' class='visit_count'>0</span>
+                        <span id='d2' class='visit_count'>0</span>
+                        <span id='d1' class='visit_count'>0</span>
+                        <span id='d0' class='visit_count'>0</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+        </div>
+
+        <!-- Customized JavaScript -->
+        <script src="/src/js/visitor_counter_show.js"></script>
 
         <!-- Bootstrap core JavaScript -->
         <script src="https://code.jquery.com/jquery.min.js"></script>
-        <script src="../src/bootstrap/js/bootstrap.js"></script>
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src='https://www.google-analytics.com/analytics.js'></script>
-        <script async src="https://apis.google.com/js/api.js"></script>
-        <script>
-            $(window).bind("load", function() {
-                $.getScript('../src/js/social.js', function() {});
-                $.getScript('../src/js/analytics.js', function() {});
-            });
-        </script>
+        <script src="/src/bootstrap/js/bootstrap.js"></script>
     </body>
 </html>'''
     return s
@@ -185,8 +212,6 @@ def getContent(prefix, suffix):
     s = '''            <div class="page-header">
                 <h2> Blog </h2>
             </div>
-
-            <hr>
 '''
 
     folderNames = os.listdir(target_folder)
@@ -244,6 +269,8 @@ def getContent(prefix, suffix):
  
         # for blog content
         s += '''
+            <hr>
+
             <div class="row">
                 <div class="col-md-12">
                     <h4> ''' + t + ''' </h4>
@@ -255,29 +282,28 @@ def getContent(prefix, suffix):
 
         # hack: delete "../" for href
         s += '''
-                        <a href="''' + c_target[3:] + '''"> (Read More) </a>
+                        <a href=''' + c_target[3:] + '''> (Read More) </a>
                     </p>
                 </div>
             </div>
-
-            <hr>
 '''
 
         # preprocess url
         c_url = "https://hogansung.github.io/article-pages/article_" + articleHash + ".html"
 
         # for article content
-        ss = '''
-            <div class="row">
+        ss = '''            <div class="row">
                 <div class="col-md-12">
                     <h2> ''' + t + ''' </h2>
                     <h3> ''' + st + ''' </h3>
                     <br>
                     <p align="right"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> ''' + ' Last edited on ' + mtime + ''' </p>
-
-                    <hr>
                 </div>
+            </div>
 
+            <hr>
+
+            <div class="row">
                 <div class="col-md-12">
                     <ul class="pagination pg-blue justify-content-center">
                         {P_ARROW}
@@ -285,13 +311,11 @@ def getContent(prefix, suffix):
                     </ul>
 
                     <!-- Below content is auto-generated by pandoc -->
-''' + content + '''
-                    <!-- Above content is auto-generated by pandoc -->
+''' + content + '''                    <!-- Above content is auto-generated by pandoc -->
 
 '''
 
-        ss += '''
-                    <hr>
+        ss += '''                    <hr>
 
                     <div class="fb-like" data-href=''' + c_url + ''' data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                     <br>

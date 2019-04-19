@@ -39,14 +39,14 @@ def getPrefix():
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Bootstrap core CSS -->
-        <link href="src/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/src/bootstrap/css/bootstrap.css" rel="stylesheet">
 
         <!-- Bootstrap social CSS -->
-        <link href="src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
-        <link href="src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+        <link href="/src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+        <link href="/src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
 
         <!-- Manual CSS -->
-        <link href="src/css/manual.css" rel="stylesheet">
+        <link href="/src/css/manual.css" rel="stylesheet">
     </head>
 
     <body style="padding:100px; background-color: rgba(240, 250, 240, 0.3)">
@@ -60,17 +60,17 @@ def getPrefix():
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse show"  id="navbarNavDropdown">
                     <ul class="nav navbar-nav ml-auto nav-tabs">
-                        <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/home.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/blog.html">BLOG</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <a class="dropdown-item" href="project_undergrad.html">Undergrad Project</a>
-                                <a class="dropdown-item" href="project_graduate.html">Graduate Project</a>
+                                <a class="dropdown-item" href="/project_undergrad.html">Undergrad Project</a>
+                                <a class="dropdown-item" href="/project_graduate.html">Graduate Project</a>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link active" href="research.html">RESEARCH</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/research.html">RESEARCH</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about.html">ABOUT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -81,21 +81,33 @@ def getPrefix():
 
 
 def getSuffix():
-    s = '''        </div>
+    s = '''
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3> Number of visits (since 2018/01/01) </h3>
+                    <br>
+                    <div align="left">
+                        <span id='d5' class='visit_count'>0</span>
+                        <span id='d4' class='visit_count'>0</span>
+                        <span id='d3' class='visit_count'>0</span>
+                        <span id='d2' class='visit_count'>0</span>
+                        <span id='d1' class='visit_count'>0</span>
+                        <span id='d0' class='visit_count'>0</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+        </div>
+
+        <!-- Customized JavaScript -->
+        <script src="/src/js/visitor_counter_show.js"></script>
 
         <!-- Bootstrap core JavaScript -->
         <script src="https://code.jquery.com/jquery.min.js"></script>
-        <script src="src/bootstrap/js/bootstrap.js"></script>
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src='https://www.google-analytics.com/analytics.js'></script>
-        <script async src="https://apis.google.com/js/api.js"></script>
-        <script>
-            $(window).bind("load", function() {
-                $.getScript('src/js/social.js', function() {});
-                $.getScript('src/js/analytics.js', function() {});
-            });
-        </script>
+        <script src="/src/bootstrap/js/bootstrap.js"></script>
     </body>
 </html>'''
     return s
@@ -118,7 +130,10 @@ def getContent(name, target_folder, target_sub_folders):
         folderNames = os.listdir(os.path.join(target_folder, target_sub_folder))
         folderNames = [x for x in folderNames if x[0] != '.']
 
-        s += '''            <div class="row">
+        s += '''
+	    <hr>
+
+            <div class="row">
                 <div class="col-md-12">
                     <h3 align="center"> ''' + target_sub_folder + ''' </h3>
                 </div>
@@ -238,20 +253,14 @@ def getContent(name, target_folder, target_sub_folders):
 
             s += '''                </div>
             </div>
-
-            <br>
 '''
 
             if idx < len(folderNames) - 1:
                 s += '''
             <br>
             <br>
-            <br>
 '''
 
-        s += '''
-            <hr>
-'''
     return s
 
 

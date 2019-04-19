@@ -8,14 +8,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Bootstrap core CSS -->
-        <link href="src/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/src/bootstrap/css/bootstrap.css" rel="stylesheet">
 
         <!-- Bootstrap social CSS -->
-        <link href="src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
-        <link href="src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+        <link href="/src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+        <link href="/src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
 
         <!-- Manual CSS -->
-        <link href="src/css/manual.css" rel="stylesheet">
+        <link href="/src/css/manual.css" rel="stylesheet">
     </head>
 
     <body style="padding:100px; background-color: rgba(240, 250, 240, 0.3)">
@@ -29,17 +29,17 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse show"  id="navbarNavDropdown">
                     <ul class="nav navbar-nav ml-auto nav-tabs">
-                        <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/home.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/blog.html">BLOG</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <a class="dropdown-item" href="project_undergrad.html">Undergrad Project</a>
-                                <a class="dropdown-item" href="project_graduate.html">Graduate Project</a>
+                                <a class="dropdown-item" href="/project_undergrad.html">Undergrad Project</a>
+                                <a class="dropdown-item" href="/project_graduate.html">Graduate Project</a>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link active" href="research.html">RESEARCH</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/research.html">RESEARCH</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about.html">ABOUT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -49,6 +49,9 @@
             <div class="page-header">
                 <h2> Research </h2>
             </div>
+
+	    <hr>
+
             <div class="row">
                 <div class="col-md-12">
                     <h3 align="center"> Accepted Papers </h3>
@@ -77,9 +80,8 @@
                 </div>
             </div>
 
-            <br>
+	    <hr>
 
-            <hr>
             <div class="row">
                 <div class="col-md-12">
                     <h3 align="center"> Pending Papers (details hidden) </h3>
@@ -103,41 +105,14 @@
                 </div>
             </div>
 
-            <br>
+	    <hr>
 
-            <hr>
             <div class="row">
                 <div class="col-md-12">
                     <h3 align="center"> Unsubmitted Works </h3>
                 </div>
             </div>
 
-            <br>
-            
-            <div class="row align-items-center">
-                <div class="col-md-5 ">
-                    <a target="_blank" href="research/Unsubmitted Works/BigDataSemiConductor/report.pdf">
-                        <img class="img-fluid" src="research/Unsubmitted Works/BigDataSemiConductor/thumbnail.jpg" alt="Image missing">
-                    </a>
-                </div>
-                <div class="col-md-7 ">
-                    <h4> Big Data TSMC Semi-conductor Competition </h4>
-                    <h5> <i> Dec 2014 - Feb 2015 </i> </h5>
-                    <p class="auto"> <strong>Abstract:</strong> Semiconductor is the foundation of modern embedded systems. In this high computation power era, the circuit probing value of semiconductor production is widely concerned. In this series of competition held by TSMC, we have more than 100,000 features by hand. Thus, the feature dimension reduction is a very key procedure for us. On top of that, since the storage of dataset itself exceeds the memory capacity on one single computer, we need to figure out a way to extract features from partial data each time and merge them afterwards. We derive a chain of preprocessing, model learning, and model prediction. Furthermore, we have a deep observation into the importance of each feature and give detailed explanation and discussion in this report. </p>
-                    <p> <strong>Keywords:</strong> <i>Big Data, Semiconductor Manufacturing</i> </p>
-                    <p> <strong>Paper:</strong> Not available </p>
-                    <a target="_blank" class="btn btn-primary" href="research/Unsubmitted Works/BigDataSemiConductor/report.pdf"> 
-                        Get the Report
-                        <span class="glyphicon glyphicon-chevron-right"> 
-                        </span>
-                    </a>
-                </div>
-            </div>
-
-            <br>
-
-            <br>
-            <br>
             <br>
             
             <div class="row align-items-center">
@@ -166,8 +141,28 @@
             </div>
 
             <br>
-
             <br>
+            
+            <div class="row align-items-center">
+                <div class="col-md-5 ">
+                    <a target="_blank" href="research/Unsubmitted Works/BigDataSemiConductor/report.pdf">
+                        <img class="img-fluid" src="research/Unsubmitted Works/BigDataSemiConductor/thumbnail.jpg" alt="Image missing">
+                    </a>
+                </div>
+                <div class="col-md-7 ">
+                    <h4> Big Data TSMC Semi-conductor Competition </h4>
+                    <h5> <i> Dec 2014 - Feb 2015 </i> </h5>
+                    <p class="auto"> <strong>Abstract:</strong> Semiconductor is the foundation of modern embedded systems. In this high computation power era, the circuit probing value of semiconductor production is widely concerned. In this series of competition held by TSMC, we have more than 100,000 features by hand. Thus, the feature dimension reduction is a very key procedure for us. On top of that, since the storage of dataset itself exceeds the memory capacity on one single computer, we need to figure out a way to extract features from partial data each time and merge them afterwards. We derive a chain of preprocessing, model learning, and model prediction. Furthermore, we have a deep observation into the importance of each feature and give detailed explanation and discussion in this report. </p>
+                    <p> <strong>Keywords:</strong> <i>Big Data, Semiconductor Manufacturing</i> </p>
+                    <p> <strong>Paper:</strong> Not available </p>
+                    <a target="_blank" class="btn btn-primary" href="research/Unsubmitted Works/BigDataSemiConductor/report.pdf"> 
+                        Get the Report
+                        <span class="glyphicon glyphicon-chevron-right"> 
+                        </span>
+                    </a>
+                </div>
+            </div>
+
             <br>
             <br>
             
@@ -197,9 +192,6 @@
             </div>
 
             <br>
-
-            <br>
-            <br>
             <br>
             
             <div class="row align-items-center">
@@ -227,23 +219,31 @@
                 </div>
             </div>
 
-            <br>
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3> Number of visits (since 2018/01/01) </h3>
+                    <br>
+                    <div align="left">
+                        <span id='d5' class='visit_count'>0</span>
+                        <span id='d4' class='visit_count'>0</span>
+                        <span id='d3' class='visit_count'>0</span>
+                        <span id='d2' class='visit_count'>0</span>
+                        <span id='d1' class='visit_count'>0</span>
+                        <span id='d0' class='visit_count'>0</span>
+                    </div>
+                </div>
+            </div>
 
             <hr>
         </div>
 
+        <!-- Customized JavaScript -->
+        <script src="/src/js/visitor_counter_show.js"></script>
+
         <!-- Bootstrap core JavaScript -->
         <script src="https://code.jquery.com/jquery.min.js"></script>
-        <script src="src/bootstrap/js/bootstrap.js"></script>
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src='https://www.google-analytics.com/analytics.js'></script>
-        <script async src="https://apis.google.com/js/api.js"></script>
-        <script>
-            $(window).bind("load", function() {
-                $.getScript('src/js/social.js', function() {});
-                $.getScript('src/js/analytics.js', function() {});
-            });
-        </script>
+        <script src="/src/bootstrap/js/bootstrap.js"></script>
     </body>
 </html>

@@ -8,14 +8,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Bootstrap core CSS -->
-        <link href="src/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/src/bootstrap/css/bootstrap.css" rel="stylesheet">
 
         <!-- Bootstrap social CSS -->
-        <link href="src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
-        <link href="src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+        <link href="/src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+        <link href="/src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
 
         <!-- Manual CSS -->
-        <link href="src/css/manual.css" rel="stylesheet">
+        <link href="/src/css/manual.css" rel="stylesheet">
     </head>
 
     <body style="padding:100px; background-color: rgba(240, 250, 240, 0.3)">
@@ -29,17 +29,17 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse show"  id="navbarNavDropdown">
                     <ul class="nav navbar-nav ml-auto nav-tabs">
-                        <li class="nav-item"><a class="nav-link active" href="home.html">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/home.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/blog.html">BLOG</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <a class="dropdown-item" href="project_undergrad.html">Undergrad Project</a>
-                                <a class="dropdown-item" href="project_graduate.html">Graduate Project</a>
+                                <a class="dropdown-item" href="/project_undergrad.html">Undergrad Project</a>
+                                <a class="dropdown-item" href="/project_graduate.html">Graduate Project</a>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="research.html">RESEARCH</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/research.html">RESEARCH</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about.html">ABOUT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -134,8 +134,13 @@
                     <p> Version 2.7.0 (2018-01-16): add readmes for Graduate/Spring (2016), Graduate/Fall (2017), and Research; update home.html </p> 
                     <p> Version 3.0.0 (2019-04-17): bump up Bootstrap version to 4.3.1; migrate pyfiles to Python 3; update all page stylings; update themes </p>
 
-                    <hr>
+                </div>
+            </div>
+                
+            <hr>
 
+            <div class="row">
+                <div class="col-md-12">
                     <h3> Number of visits (since 2018/01/01) </h3>
                     <br>
                     <div align="left">
@@ -146,15 +151,17 @@
                         <span id='d1' class='visit_count'>0</span>
                         <span id='d0' class='visit_count'>0</span>
                     </div>
-                <div class="col-md-12">
+                <div>
             </div>
 
             <hr>
         </div>
 
+        <!-- Customized JavaScript -->
+        <script src="/src/js/visitor_counter_show.js"></script>
+
         <!-- Bootstrap core JavaScript -->
-        <script src="src/js/visitor_counter.js"></script>
         <script src="https://code.jquery.com/jquery.min.js"></script>
-        <script src="src/bootstrap/js/bootstrap.js"></script>
+        <script src="/src/bootstrap/js/bootstrap.js"></script>
     </body>
 </html>

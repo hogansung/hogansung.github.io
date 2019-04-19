@@ -16,17 +16,20 @@
         <meta property="og:site_name" content="Hogan's Personal Website"/>
 
         <!-- Bootstrap core CSS -->
-        <link href="../src/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/src/bootstrap/css/bootstrap.css" rel="stylesheet">
 
         <!-- Bootstrap social CSS -->
-        <link href="../src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
-        <link href="../src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+        <link href="/src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+        <link href="/src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
 
         <!-- Manual CSS -->
-        <link href="../src/css/manual.css" rel="stylesheet">
+        <link href="/src/css/manual.css" rel="stylesheet">
     </head>
 
     <body style="padding:100px; background-color: rgba(240, 250, 240, 0.3)">
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=158857908084540&autoLogAppEvents=1"></script>
+
         <!-- Fixed navbar -->
         <nav class="navbar navbar-expand-lg fixed-top navbar-default bg-dark">
             <div class="container">
@@ -37,34 +40,35 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse show"  id="navbarNavDropdown">
                     <ul class="nav navbar-nav ml-auto nav-tabs">
-                        <li class="nav-item"><a class="nav-link" href="../home.html">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="../blog.html">BLOG</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/home.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/blog.html">BLOG</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle disable" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <a class="dropdown-item" href="../project_undergrad.html">Undergrad Project</a>
-                                <a class="dropdown-item" href="../project_graduate.html">Graduate Project</a>
+                                <a class="dropdown-item" href="/project_undergrad.html">Undergrad Project</a>
+                                <a class="dropdown-item" href="/project_graduate.html">Graduate Project</a>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="../research.html">RESEARCH</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/research.html">RESEARCH</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about.html">ABOUT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
 
         <div class="container">
-
             <div class="row">
                 <div class="col-md-12">
                     <h2> Road Trip + Commencement + Thoughts </h2>
                     <h3> Turning point of my life: graudated from being a student </h3>
                     <br>
-                    <p align="right"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>  Last edited on Thu Apr 18 00:20:34 2019 </p>
-
-                    <hr>
+                    <p align="right"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>  Last edited on Thu Apr 18 21:35:23 2019 </p>
                 </div>
+            </div>
 
+            <hr>
+
+            <div class="row">
                 <div class="col-md-12">
                     <ul class="pagination pg-blue justify-content-center">
                         <li class="page-item"><a class="page-link" href="../article-pages/article_474c3853fb5b85237572d3feb61fc87a.html">&larr; Older</a></li>
@@ -85,9 +89,7 @@
                     <p>I remember I regarded &quot;choice&quot; and &quot;balance&quot; as my indicator for 2016 and took &quot;prioritization&quot; as one suggested indicator from Prof. Shou de for 2017. Next, I am thinking of a new indicator, called &quot;pace&quot;. Everyone has its own pace, no matter it is fast or slow, smooth or rough, tiring or inspiring. we are all on the way to our destined goal. We might lost something on the trail, such as youth, some friends without being contacted, elders that passed away, but we are also gaining much more, including new friendships, relationships, knowledge, vision, wisdom, and a lot more. I am only wishing myself to be open-minded and keep each of my stride swiftly but steadily before I reached to the end of my life.</p>
                     <h3 id="section-v-to-future">SECTION V: To Future</h3>
                     <p>At the end of this article, I want to write down something that is quite inspiring to me nowadays. I am not sure whether I read some similar statements somewhere or not, it just suddenly came to my mind so clearly: We all live once, just follow your dream and live it out, in your own pace!</p>
-
                     <!-- Above content is auto-generated by pandoc -->
-
 
                     <hr>
 
@@ -100,20 +102,32 @@
                     <br>
                 </div>
             </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3> Number of visits (since 2018/01/01) </h3>
+                    <br>
+                    <div align="left">
+                        <span id='d5' class='visit_count'>0</span>
+                        <span id='d4' class='visit_count'>0</span>
+                        <span id='d3' class='visit_count'>0</span>
+                        <span id='d2' class='visit_count'>0</span>
+                        <span id='d1' class='visit_count'>0</span>
+                        <span id='d0' class='visit_count'>0</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
         </div>
+
+        <!-- Customized JavaScript -->
+        <script src="/src/js/visitor_counter_show.js"></script>
 
         <!-- Bootstrap core JavaScript -->
         <script src="https://code.jquery.com/jquery.min.js"></script>
-        <script src="../src/bootstrap/js/bootstrap.js"></script>
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src='https://www.google-analytics.com/analytics.js'></script>
-        <script async src="https://apis.google.com/js/api.js"></script>
-        <script>
-            $(window).bind("load", function() {
-                $.getScript('../src/js/social.js', function() {});
-                $.getScript('../src/js/analytics.js', function() {});
-            });
-        </script>
+        <script src="/src/bootstrap/js/bootstrap.js"></script>
     </body>
 </html>
