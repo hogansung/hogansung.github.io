@@ -81,12 +81,12 @@ def getSuffix():
             <hr>
         </div>
 
-        <!-- Customized JavaScript -->
-        <script src="src/js/visitor_counter_show.js"></script>
-
         <!-- Bootstrap core JavaScript -->
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script src="src/bootstrap/js/bootstrap.js"></script>
+
+        <!-- Customized JavaScript -->
+        <script src="src/js/visitor_counter_show.js"></script>
     </body>
 </html>'''
     return s

@@ -89,12 +89,12 @@ def getSuffix():
             <hr>
         </div>
 
-        <!-- Customized JavaScript -->
-        <script src="/src/js/visitor_counter_show.js"></script>
-
         <!-- Bootstrap core JavaScript -->
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script src="/src/bootstrap/js/bootstrap.js"></script>
+
+        <!-- Customized JavaScript -->
+        <script src="/src/js/visitor_counter_show.js"></script>
     </body>
 </html>'''
     return s
@@ -186,7 +186,7 @@ def getContent(name, target_folder, target_sub_folders):
 </html>
 ''')
 
-            s += '''            
+            s += '''
             <div class="row align-items-center">
                 <div class="col-md-5 ">
 '''
