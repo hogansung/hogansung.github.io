@@ -64,9 +64,9 @@ def getPrefix():
                         <li class="nav-item"><a class="nav-link" href="/research.html">RESEARCH</a></li>
                         <li class="nav-item"><a class="nav-link" href="/about.html">ABOUT</a></li>
                     </ul>
-		</div><!-- /.navbar-collapse -->
-	    </div><!-- /.container-fluid -->
-	</nav>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
 
 '''
     return s
@@ -76,20 +76,7 @@ def getSuffix():
     s = '''
             <hr>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <h3> Number of visits (since 2018/01/01) </h3>
-                    <br>
-                    <div align="left">
-                        <span id='d5' class='visit_count'>0</span>
-                        <span id='d4' class='visit_count'>0</span>
-                        <span id='d3' class='visit_count'>0</span>
-                        <span id='d2' class='visit_count'>0</span>
-                        <span id='d1' class='visit_count'>0</span>
-                        <span id='d0' class='visit_count'>0</span>
-                    </div>
-                </div>
-            </div>
+            <div id="visitor_counter"></div>
 
             <hr>
         </div>
@@ -128,7 +115,7 @@ def getContent(name, target_folder, target_sub_folders):
                 </div>
             </div>
 
-	    <br>
+            <br>
 '''
 
         for folderName in folderNames:

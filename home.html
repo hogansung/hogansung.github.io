@@ -16,6 +16,8 @@
 
         <!-- Manual CSS -->
         <link href="/src/css/manual.css" rel="stylesheet">
+
+        <link rel="import" href="/visitor_counter.html">
     </head>
 
     <body style="padding:100px; background-color: rgba(240, 250, 240, 0.3)">
@@ -58,9 +60,9 @@
                     <br>
                     <p> I have decided to build one personalized website for many years, but have no time to fulfill this idea. Two years ago, after graduation with bachelor degree, I finally started to build my website! For now, I have finished my master degree is Univeristy of California, San Diego, and is going to work full-time in Yelp, San Francisco. </p>
                     <p> This website is designed to fulfill the following purposes:
-                        <li> Share my ideas through <a href="blog.html"><strong>Blog</strong></a>; while others can give me feedback through Facebook comment and like&amp;share plugins. </li>
-                        <li> Preserve and present my old project works through <a href="project_undergrad.html"><strong>Undergrad Project</strong></a>, <a href="project_graduate.html"><strong>Graduate Project</strong></a>, and <a href="research.html"><strong>Research </strong></a>. </li>
-                        <li> Polish my education, work experience, research experience, and skill proficiencies through <a href="about.html"><strong> About </strong></a>. </li>
+                    <li> Share my ideas through <a href="blog.html"><strong>Blog</strong></a>; while others can give me feedback through Facebook comment and like&amp;share plugins. </li>
+                    <li> Preserve and present my old project works through <a href="project_undergrad.html"><strong>Undergrad Project</strong></a>, <a href="project_graduate.html"><strong>Graduate Project</strong></a>, and <a href="research.html"><strong>Research </strong></a>. </li>
+                    <li> Polish my education, work experience, research experience, and skill proficiencies through <a href="about.html"><strong> About </strong></a>. </li>
                     </p>
 
                     <p> Since I am a newbie to website design, there must be much room for improvements. If you have any suggestion to this website, please feel free to contact me. Several available contact approaches can be found in <a href="about.html"><strong>About</strong></a>. </p>
@@ -123,7 +125,7 @@
                     <p> Version 1.0.0 (2016-09-21): migrate from CSIE server to GitHub; redesign webpage framework  </p>
                     <p> Version 1.1.0 (2016-09-22): update about.html, including adding two pulications, modifying statements, showing percentage in skills, and renewing social links; update home.html: adding Edit History block </p>
                     <p> Version 1.2.0 (2017-06-21): update publications; update intern experience (Yelp); update school GPA </p>
-                    
+
                     <p> Version 2.0.0 (2018-01-04): update thumbnails for each project: use MagickWand to extract the first page of every pdf file and transfer them from pdf format into png format; update about.html </p> 
                     <p> Version 2.1.0 (2018-01-05): re-design the structure of project folder; update description of projects </p>
                     <p> Version 2.2.0 (2018-01-06): re-design the structure of project folder; add Facebook comment plugin; improve the loading speed of Facebook plugin; improve loading speed of thumbnails - using jpg instead of png </p>
@@ -139,32 +141,19 @@
                     <p> Version 4.1.0 (2019-04-19): use ajax + php scripts to update and query MySQL table, in order to calculate visitor_counts </p>
                 </div>
             </div>
-                
+
             <hr>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <h3> Number of visits (since 2019/04/19) </h3>
-                    <br>
-                    <div align="left">
-                        <span id='d5' class='visit_count'>0</span>
-                        <span id='d4' class='visit_count'>0</span>
-                        <span id='d3' class='visit_count'>0</span>
-                        <span id='d2' class='visit_count'>0</span>
-                        <span id='d1' class='visit_count'>0</span>
-                        <span id='d0' class='visit_count'>0</span>
-                    </div>
-                <div>
-            </div>
+            <div id="visitor_counter"></div>
 
             <hr>
         </div>
 
-        <!-- Customized JavaScript -->
-        <script src="/src/js/visitor_counter_show.js"></script>
-
         <!-- Bootstrap core JavaScript -->
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script src="/src/bootstrap/js/bootstrap.js"></script>
+
+        <!-- Customized JavaScript -->
+        <script src="/src/js/visitor_counter_show.js"></script>
     </body>
 </html>
