@@ -1,50 +1,12 @@
-<!DOCTYPE html>
+from base_page import BasePage
 
-<html lang="en" class="normal-full">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+class AboutPage(BasePage):
+    _file_name = 'about.html'
+    _url_name = 'ABOUT_URL'
 
-        <!-- Bootstrap core CSS -->
-        <link href="src/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-        <!-- Bootstrap social CSS -->
-        <link href="src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
-        <link href="src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
-
-        <!-- Manual CSS -->
-        <link href="src/css/manual.css" rel="stylesheet">
-    </head>
-
-    <body style="padding:100px; background-color: rgba(240, 250, 240, 0.3)">
-        <!-- Fixed navbar -->
-        <nav class="navbar navbar-expand-lg fixed-top navbar-default bg-dark">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">Hao-en Sung (Hogan)</a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse show"  id="navbarNavDropdown">
-                    <ul class="nav navbar-nav ml-auto nav-tabs">
-                        <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="project.html">PROJECT<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <a class="dropdown-item" href="project_undergrad.html">Undergrad Project</a>
-                                <a class="dropdown-item" href="project_graduate.html">Graduate Project</a>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="research.html">RESEARCH</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-        <div class="container">
+    @classmethod
+    def customize_content(cls):
+        return '''        <div class="container">
             <div class="page-header">
                 <h2> About </h2>
             </div>
@@ -368,20 +330,12 @@
             </div>
 
             <hr>
-        </div>
+        </div>'''
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="https://code.jquery.com/jquery.min.js"></script>
-        <script src="src/bootstrap/js/bootstrap.js"></script>
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src='https://www.google-analytics.com/analytics.js'></script>
-        <script async src="https://apis.google.com/js/api.js"></script>
-        <script>
-            $(window).bind("load", function() {
-                $.getScript('src/js/social.js', function() {});
-                $.getScript('src/js/analytics.js', function() {});
-            });
-        </script>
-    </body>
-</html>
+    @classmethod
+    def render(cls):
+        page_str = ''
+        page_str += cls.customize_prefix()
+        page_str += cls.customize_content()
+        page_str += cls.customize_suffix()
+        return page_str
