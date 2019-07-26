@@ -39,7 +39,7 @@
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="research.html">RESEARCH</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">ABOUT</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -380,7 +380,7 @@
         <script>
             $(window).bind("load", function() {
                 $.getScript('src/js/social.js', function() {});
-                $.getScript('src/js/analytics.js', function() {});
+                $.getScript('src/js/analytics.js', function() { gapi.load('client', initClient); });
             });
         </script>
     </body>

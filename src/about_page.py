@@ -1,8 +1,7 @@
 from base_page import BasePage
 
 class AboutPage(BasePage):
-    _file_name = 'about.html'
-    _url_name = 'ABOUT_URL'
+    _base_name = 'ABOUT'
 
     @classmethod
     def customize_content(cls):
@@ -331,11 +330,3 @@ class AboutPage(BasePage):
 
             <hr>
         </div>'''
-
-    @classmethod
-    def render(cls):
-        page_str = ''
-        page_str += cls.customize_prefix()
-        page_str += cls.customize_content()
-        page_str += cls.customize_suffix()
-        return page_str

@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-lg fixed-top navbar-default bg-dark">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">Hao-en Sung (Hogan)</a>
+                    <a class="navbar-brand" href="#">Hao-en Sung (Hogan)</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -32,7 +32,7 @@
                         <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">BLOG</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="project.html">PROJECT<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <a class="dropdown-item" href="project_undergrad.html">Undergrad Project</a>
                                 <a class="dropdown-item" href="project_graduate.html">Graduate Project</a>
@@ -45,20 +45,19 @@
             </div><!-- /.container-fluid -->
         </nav>
 
+
         <!-- Bootstrap core JavaScript -->
-        <!--<script src="https://code.jquery.com/jquery.min.js"></script>-->
+        <script src="https://code.jquery.com/jquery.min.js"></script>
         <script src="src/bootstrap/js/bootstrap.js"></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <!--
         <script async src='https://www.google-analytics.com/analytics.js'></script>
         <script async src="https://apis.google.com/js/api.js"></script>
         <script>
             $(window).bind("load", function() {
                 $.getScript('src/js/social.js', function() {});
-                $.getScript('src/js/analytics.js', function() {});
+                $.getScript('src/js/analytics.js', function() { gapi.load('client', initClient); });
             });
         </script>
-        -->
     </body>
 </html>

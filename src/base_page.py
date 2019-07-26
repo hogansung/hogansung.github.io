@@ -1,7 +1,9 @@
 class BasePage:
-    _file_name = 'base.html'
-    _url_name = 'BASE_URL'
-    _url_dict = {
+    _base_name = 'BASE'
+    _dict = {
+            'BACKGROUND_CLASS': 'normal-full',
+            'PADDING': '100',
+            'INDEX_URL': 'index.html',
             'HOME_URL': 'home.html',
             'BLOG_URL': 'blog.html',
             'PROJ_URL': 'project.html',
@@ -9,11 +11,26 @@ class BasePage:
             'PROJ_GRAD_URL': 'project_graduate.html',
             'RSRCH_URL': 'research.html',
             'ABOUT_URL': 'about.html',
+            'HOME_LINK': 'nav-link',
+            'BLOG_LINK': 'nav-link',
+            'PROJ_UGRAD_LINK': 'dropdown-item',
+            'PROJ_GRAD_LINK': 'dropdown-item',
+            'RSRCH_LINK': 'nav-link',
+            'ABOUT_LINK': 'nav-link',
     }
+    _extra_dict = {}
 
     @classmethod
-    def _update_url_dict(cls):
-        cls._url_dict.update({cls._url_name: '#'})
+    def _update_dict(cls):
+        cls._dc_dict = cls._dict.copy()
+        cls._dc_dict.update({
+            cls._base_name+'_URL': '#',
+        })
+        if cls._base_name+'_LINK' in cls._dict.keys():
+            cls._dc_dict.update({
+                cls._base_name+'_LINK': cls._dict[cls._base_name+'_LINK'] + ' active',
+            })
+        cls._dc_dict.update(cls._extra_dict)
 
     @classmethod
     def fetch_prefix_template(cls):
@@ -30,7 +47,11 @@ class BasePage:
     @classmethod
     def customize_prefix(cls):
         prefix_template = cls.fetch_prefix_template()
-        return prefix_template.format(**cls._url_dict)
+        return prefix_template.format(**cls._dc_dict)
+
+    @classmethod
+    def customize_content(cls):
+        raise(NotImplementedError)
 
     @classmethod
     def customize_suffix(cls):
@@ -38,17 +59,18 @@ class BasePage:
         return suffix_template
 
     @classmethod
-    def customize_content(cls):
-        raise(NotImplementedError)
-
-    @classmethod
     def render(cls):
-        raise(NotImplementedError)
+        page_str = ''
+        page_str += cls.customize_prefix()
+        page_str += cls.customize_content()
+        page_str += cls.customize_suffix()
+        return page_str
 
     @classmethod
     def run(cls):
-        cls._update_url_dict()
-        with open(cls._file_name, 'w') as f:
+        cls._update_dict()
+        file_name = cls._base_name.lower() + '.html'
+        with open(file_name, 'w') as f:
             f.write(cls.render())
 
     @classmethod
