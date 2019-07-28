@@ -1,24 +1,30 @@
-class BasePage:
-    _base_name = 'BASE'
+from abc import abstractmethod
+
+
+class BasePage(object):
     _dict = {
             'BACKGROUND_CLASS': 'normal-full',
             'PADDING': '100',
             'INDEX_URL': 'index.html',
             'HOME_URL': 'home.html',
             'BLOG_URL': 'blog.html',
-            'PROJ_URL': 'project.html',
-            'PROJ_UGRAD_URL': 'project_undergrad.html',
-            'PROJ_GRAD_URL': 'project_graduate.html',
-            'RSRCH_URL': 'research.html',
+            'PROJECT_UNDERGRAD_URL': 'project_undergrad.html',
+            'PROJECT_GRADUATE_URL': 'project_graduate.html',
+            'RESEARCH_URL': 'research.html',
             'ABOUT_URL': 'about.html',
             'HOME_LINK': 'nav-link',
             'BLOG_LINK': 'nav-link',
-            'PROJ_UGRAD_LINK': 'dropdown-item',
-            'PROJ_GRAD_LINK': 'dropdown-item',
-            'RSRCH_LINK': 'nav-link',
+            'PROJECT_UNDERGRAD_LINK': 'dropdown-item',
+            'PROJECT_GRADUATE_LINK': 'dropdown-item',
+            'RESEARCH_LINK': 'nav-link',
             'ABOUT_LINK': 'nav-link',
     }
     _extra_dict = {}
+
+    @property
+    @abstractmethod
+    def _base_name(self):
+        pass
 
     @classmethod
     def _update_dict(cls):
