@@ -1,59 +1,55 @@
 import os
 import pathlib
 
-from abc import abstractmethod
-
 from base_page import BasePage
 
 
-class ProjPage(BasePage):
-    default_readme = 'project/template/readme.txt'
-    default_image = 'project/template/catch.png'
-    default_report = 'project/template/report.pdf'
-
-    @property
-    @abstractmethod
-    def _folder(self):
-        pass
-
-    @property
-    @abstractmethod
-    def _sub_folders(self):
-        pass
-
-    @property
-    @abstractmethod
-    def _title(self):
-        pass
+class ResearchPage(BasePage):
+    _base_name = 'RESEARCH'
+    _folder = 'research'
+    _sub_folders = [
+            {
+                'name': 'Accepted Papers',
+                'report_link_enabled': True,
+            },
+            {
+                'name': 'Pending Papers (details hidden)',
+                'report_link_enabled': False,
+            },
+            {
+                'name': 'Unsubmitted Works',
+                'report_link_enabled': True,
+            },
+    ]
 
     @classmethod
     def customize_content(cls):
         s = '''        <div class="container">
             <div class="page-header">
-                <h2> ''' + cls._title + ''' </h2>
+                <h2> Research </h2>
             </div>
-
 '''
 
-        for sub_folder in cls._sub_folders:
+        for sub_folder_info in cls._sub_folders:
+            sub_folder = sub_folder_info['name']
+            report_link = sub_folder_info['report_link_enabled']
+
             if not os.path.exists(os.path.join(cls._folder, sub_folder)):
                 continue
 
-            folder_names = sorted(os.listdir(os.path.join(cls._folder, sub_folder)))
-            folder_names = [x for x in folder_names if x[0] != '.' and x[0] != '_']
+            folder_names = os.listdir(os.path.join(cls._folder, sub_folder))
+            folder_names = [x for x in folder_names if x[0] != '.']
 
-            s += '''
-            <div class="row">
+            s += '''            <div class="row">
                 <div class="col-md-12">
                     <h3 align="center"> ''' + sub_folder + ''' </h3>
                 </div>
             </div>
 
             <br>
-
 '''
 
-            for folder_name in folder_names:
+            for idx, folder_name in enumerate(folder_names):
                 proj_name = os.path.join(cls._folder, sub_folder, folder_name)
                 file_names = os.listdir(proj_name)
                 file_names = [x for x in file_names if x[0] != '.']
@@ -61,8 +57,7 @@ class ProjPage(BasePage):
                 try:
                     report_path = os.path.join(proj_name, [x for x in file_names if x.find('report') >= 0][0])
                 except:
-                    # report_path = default_report
-                    continue
+                    report_path = default_report
 
                 try:
                     readme_path = os.path.join(proj_name, [x for x in file_names if x.find('readme') >= 0][0])
@@ -80,7 +75,13 @@ class ProjPage(BasePage):
                     video_path = None
 
                 with open(readme_path) as f:
-                    t, st, cnt = [line.strip() for line in f.readlines()]
+                    lines = [line.strip() for line in f.readlines()]
+                    if len(lines) == 3:
+                        t, st, cnt = lines
+                        abstract = keywords = ""
+                    else:
+                        t, st, abstract, keywords = lines[:4]
+                        link = lines[4] if len(lines) == 5 else None
 
                 # hack: get relative location
                 report_p = pathlib.Path(report_path)
@@ -107,16 +108,34 @@ class ProjPage(BasePage):
 
                 s += '''
             <div class="row align-items-center">
-                <div class="col-md-4 ">
-                    <a target="_blank" href="''' + rel_report_path + '''">
-                        <img class="img-fluid" src="''' + rel_image_path + '''" alt="Image missing">
+                <div class="col-md-5 ">
+'''
+                if report_link:
+                    s += '''                    <a target="_blank" href="''' + rel_report_path + '''">
+'''
+                else:
+                    s += '''                    <a>
+'''
+
+                s += '''                        <img class="img-fluid" src="''' + rel_image_path + '''" alt="Image missing">
                     </a>
-                </div><!--
-                --><div class="col-md-8 ">
+                </div>
+                <div class="col-md-7 ">
                     <h4> ''' + t + ''' </h4>
                     <h5> <i> ''' + st + ''' </i> </h5>
-                    <p> ''' + cnt + ''' </p>
-                    <a target="_blank" class="btn btn-primary" href="''' + rel_report_path + '''">
+                    <p class="auto"> <strong>Abstract:</strong> ''' + abstract + ''' </p>
+                    <p> <strong>Keywords:</strong> <i>''' + keywords + '''</i> </p>
+'''
+
+                if link:
+                    s += '''                    <p> <strong>Paper:</strong> <a href="''' + link + '''" target="_blank">''' + link + '''</a> </p>
+'''
+                else:
+                    s += '''                    <p> <strong>Paper:</strong> Not available </p>
+'''
+
+                if report_link:
+                    s += '''                    <a target="_blank" class="btn btn-primary" href="''' + rel_report_path + '''">
                         Get the Report
                         <span class="glyphicon glyphicon-chevron-right">
                         </span>
@@ -124,7 +143,7 @@ class ProjPage(BasePage):
 '''
 
                 if os.path.isfile(os.path.join(proj_name, 'source.zip')):
-                    s += '''                    <a target="_blank" class="btn btn-primary" href="''' + os.path.join(proj_name , 'source.zip') + '''">
+                    s += '''                    <a class="btn btn-primary" target="_blank" href="''' + os.path.join(proj_name[3:] , 'source.zip') + '''">
                         Get the Source
                         <span class="glyphicon glyphicon-chevron-right">
                         </span>
@@ -132,7 +151,7 @@ class ProjPage(BasePage):
 '''
 
                 if os.path.isfile(os.path.join(proj_name, 'media.html')):
-                    s += '''                    <a target="_blank" class="btn btn-primary" href="''' + os.path.join(proj_name , 'media.html') + '''">
+                    s += '''                    <a class="btn btn-primary" target="_blank" href="''' + os.path.join(proj_name[3:] , 'media.html') + '''">
                         Get the Video
                         <span class="glyphicon glyphicon-chevron-right">
                         </span>
@@ -143,23 +162,20 @@ class ProjPage(BasePage):
             </div>
 
             <br>
+'''
+
+                if idx < len(folder_names) - 1:
+                    s += '''
+            <br>
+            <br>
             <br>
 '''
+
             s += '''
             <hr>
 '''
+
+        s += '''
+        </div>
+'''
         return s
-
-
-class ProjGradPage(ProjPage):
-    _base_name = 'PROJECT_GRADUATE'
-    _folder = 'project/graduate'
-    _sub_folders = ['Fall (2016)', 'Winter (2016)', 'Spring (2016)', 'Fall (2017)']
-    _title = 'Graduate Project'
-
-
-class ProjUGradPage(ProjPage):
-    _base_name = 'PROJECT_UNDERGRAD'
-    _folder = 'project/undergrad'
-    _sub_folders = ['Freshman (2011)', 'Sophomore (2012)', 'Junior (2013)', 'Senior (2014)']
-    _title = 'Undergrad Project'
