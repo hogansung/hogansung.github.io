@@ -1,45 +1,43 @@
 import os
 import pathlib
 
-from abc import abstractmethod
+from abc import ABCMeta, abstractproperty
 
 from base_page import BasePage
 
 
-class ProjectPage(BasePage):
-    default_readme = 'project/template/readme.txt'
-    default_image = 'project/template/catch.png'
-    default_report = 'project/template/report.pdf'
+class ProjectPage(BasePage, metaclass=ABCMeta):
+    def __init__(self):
+        super().__init__()
+        self.default_readme = 'project/template/readme.txt'
+        self.default_image = 'project/template/catch.png'
+        self.default_report = 'project/template/report.pdf'
 
-    @property
-    @abstractmethod
+    @abstractproperty
     def _folder(self):
         pass
 
-    @property
-    @abstractmethod
+    @abstractproperty
     def _sub_folders(self):
         pass
 
-    @property
-    @abstractmethod
+    @abstractproperty
     def _title(self):
         pass
 
-    @classmethod
-    def customize_content(cls):
+    def customize_content(self):
         s = '''        <div class="container">
             <div class="page-header">
-                <h2> ''' + cls._title + ''' </h2>
+                <h2> ''' + self._title + ''' </h2>
             </div>
 
 '''
 
-        for sub_folder in cls._sub_folders:
-            if not os.path.exists(os.path.join(cls._folder, sub_folder)):
+        for sub_folder in self._sub_folders:
+            if not os.path.exists(os.path.join(self._folder, sub_folder)):
                 continue
 
-            folder_names = sorted(os.listdir(os.path.join(cls._folder, sub_folder)))
+            folder_names = sorted(os.listdir(os.path.join(self._folder, sub_folder)))
             folder_names = [x for x in folder_names if x[0] != '.' and x[0] != '_']
 
             s += '''
@@ -54,25 +52,25 @@ class ProjectPage(BasePage):
 '''
 
             for folder_name in folder_names:
-                proj_name = os.path.join(cls._folder, sub_folder, folder_name)
+                proj_name = os.path.join(self._folder, sub_folder, folder_name)
                 file_names = os.listdir(proj_name)
                 file_names = [x for x in file_names if x[0] != '.']
 
                 try:
                     report_path = os.path.join(proj_name, [x for x in file_names if x.find('report') >= 0][0])
                 except:
-                    # report_path = default_report
+                    # report_path = self.default_report
                     continue
 
                 try:
                     readme_path = os.path.join(proj_name, [x for x in file_names if x.find('readme') >= 0][0])
                 except:
-                    readme_path = default_readme
+                    readme_path = self.default_readme
 
                 try:
                     image_path = os.path.join(proj_name, [x for x in file_names if x.find('jpg') >= 0][0])
                 except:
-                    image_path = default_image
+                    image_path = self.default_image
 
                 try:
                     video_path = os.path.join(proj_name, [x for x in file_names if x.find('video') >= 0][0])
@@ -152,14 +150,42 @@ class ProjectPage(BasePage):
 
 
 class ProjectGraduatePage(ProjectPage):
-    _base_name = 'PROJECT_GRADUATE'
-    _folder = 'project/graduate'
-    _sub_folders = ['Fall (2016)', 'Winter (2016)', 'Spring (2016)', 'Fall (2017)']
-    _title = 'Graduate Project'
+    def __init__(self):
+        super().__init__()
+
+    @property
+    def _base_name(self):
+        return 'PROJECT_GRADUATE'
+
+    @property
+    def _folder(self):
+        return 'project/graduate'
+
+    @property
+    def _sub_folders(self):
+        return ['Fall (2016)', 'Winter (2016)', 'Spring (2016)', 'Fall (2017)']
+
+    @property
+    def _title(self):
+        return 'Graduate Project'
 
 
 class ProjectUnderGradPage(ProjectPage):
-    _base_name = 'PROJECT_UNDERGRAD'
-    _folder = 'project/undergrad'
-    _sub_folders = ['Freshman (2011)', 'Sophomore (2012)', 'Junior (2013)', 'Senior (2014)']
-    _title = 'Undergrad Project'
+    def __init__(self):
+        super().__init__()
+
+    @property
+    def _base_name(self):
+        return 'PROJECT_UNDERGRAD'
+
+    @property
+    def _folder(self):
+        return 'project/undergrad'
+
+    @property
+    def _sub_folders(self):
+        return ['Freshman (2011)', 'Sophomore (2012)', 'Junior (2013)', 'Senior (2014)']
+
+    @property
+    def _title(self):
+        return 'Undergrad Project'

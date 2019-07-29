@@ -1,10 +1,14 @@
 from base_page import BasePage
 
 class AboutPage(BasePage):
-    _base_name = 'ABOUT'
+    def __init__(self):
+        super().__init__()
 
-    @classmethod
-    def customize_content(cls):
+    @property
+    def _base_name(self):
+        return 'ABOUT'
+
+    def customize_content(self):
         return '''        <div class="container">
             <div class="page-header">
                 <h2> About </h2>

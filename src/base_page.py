@@ -1,84 +1,78 @@
-from abc import abstractmethod
+from abc import ABCMeta, abstractproperty
 
 
-class BasePage(object):
-    _dict = {
-            'BACKGROUND_CLASS': 'normal-full',
-            'PADDING': '100',
-            'INDEX_URL': 'index.html',
-            'HOME_URL': 'home.html',
-            'BLOG_URL': 'blog.html',
-            'PROJECT_UNDERGRAD_URL': 'project_undergrad.html',
-            'PROJECT_GRADUATE_URL': 'project_graduate.html',
-            'RESEARCH_URL': 'research.html',
-            'ABOUT_URL': 'about.html',
-            'HOME_LINK': 'nav-link',
-            'BLOG_LINK': 'nav-link',
-            'PROJECT_UNDERGRAD_LINK': 'dropdown-item',
-            'PROJECT_GRADUATE_LINK': 'dropdown-item',
-            'RESEARCH_LINK': 'nav-link',
-            'ABOUT_LINK': 'nav-link',
-    }
-    _extra_dict = {}
+class BasePage(object, metaclass=ABCMeta):
+    def __init__(self):
+        self._dict = {
+                'BACKGROUND_CLASS': 'normal-full',
+                'FACEBOOK_MODERATION': '',
+                'PADDING': '100',
+                'INDEX_URL': 'index.html',
+                'HOME_URL': 'home.html',
+                'BLOG_URL': 'blog.html',
+                'PROJECT_UNDERGRAD_URL': 'project_undergrad.html',
+                'PROJECT_GRADUATE_URL': 'project_graduate.html',
+                'RESEARCH_URL': 'research.html',
+                'ABOUT_URL': 'about.html',
+                'HOME_LINK': 'nav-link',
+                'BLOG_LINK': 'nav-link',
+                'PROJECT_UNDERGRAD_LINK': 'dropdown-item',
+                'PROJECT_GRADUATE_LINK': 'dropdown-item',
+                'RESEARCH_LINK': 'nav-link',
+                'ABOUT_LINK': 'nav-link',
+                'PATH_PREFIX': '',
+        }
+        self._extra_dict = {}
 
-    @property
-    @abstractmethod
+    @abstractproperty
     def _base_name(self):
         pass
 
-    @classmethod
-    def _update_dict(cls):
-        cls._dc_dict = cls._dict.copy()
-        cls._dc_dict.update({
-            cls._base_name+'_URL': '#',
-        })
-        if cls._base_name+'_LINK' in cls._dict.keys():
-            cls._dc_dict.update({
-                cls._base_name+'_LINK': cls._dict[cls._base_name+'_LINK'] + ' active',
+    def _update_dict(self):
+        self._dc_dict = self._dict.copy()
+        if self._base_name+'_URL' in self._dict.keys():
+            self._dc_dict.update({
+                self._base_name+'_URL': '#',
             })
-        cls._dc_dict.update(cls._extra_dict)
+        if self._base_name+'_LINK' in self._dict.keys():
+            self._dc_dict.update({
+                self._base_name+'_LINK': self._dict[self._base_name+'_LINK'] + ' active',
+            })
+        self._dc_dict.update(self._extra_dict)
 
-    @classmethod
-    def fetch_prefix_template(cls):
+    def fetch_prefix_template(self):
         with open('template/prefix.txt') as f:
             lines = f.readlines()
         return ''.join(lines)
 
-    @classmethod
-    def fetch_suffix_template(cls):
+    def fetch_suffix_template(self):
         with open('template/suffix.txt') as f:
             lines = f.readlines()
         return ''.join(lines)
 
-    @classmethod
-    def customize_prefix(cls):
-        prefix_template = cls.fetch_prefix_template()
-        return prefix_template.format(**cls._dc_dict)
+    def customize_prefix(self):
+        prefix_template = self.fetch_prefix_template()
+        return prefix_template.format(**self._dc_dict)
 
-    @classmethod
-    def customize_content(cls):
+    def customize_content(self):
         raise(NotImplementedError)
 
-    @classmethod
-    def customize_suffix(cls):
-        suffix_template = cls.fetch_suffix_template()
-        return suffix_template
+    def customize_suffix(self):
+        suffix_template = self.fetch_suffix_template()
+        return suffix_template.format(**self._dc_dict)
 
-    @classmethod
-    def render(cls):
+    def render(self):
         page_str = ''
-        page_str += cls.customize_prefix()
-        page_str += cls.customize_content()
-        page_str += cls.customize_suffix()
+        page_str += self.customize_prefix()
+        page_str += self.customize_content()
+        page_str += self.customize_suffix()
         return page_str
 
-    @classmethod
-    def run(cls):
-        cls._update_dict()
-        file_name = cls._base_name.lower() + '.html'
+    def run(self):
+        self._update_dict()
+        file_name = self._base_name.lower() + '.html'
         with open(file_name, 'w') as f:
-            f.write(cls.render())
+            f.write(self.render())
 
-    @classmethod
-    def clean(cls):
+    def clean(self):
         raise(NotImplementedError)

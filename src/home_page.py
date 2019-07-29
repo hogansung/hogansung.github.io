@@ -1,11 +1,15 @@
 from base_page import BasePage
 
-class HomePage(BasePage):
-    _base_name = 'HOME'
-    _extra_dict = {}
 
-    @classmethod
-    def customize_content(cls):
+class HomePage(BasePage):
+    def __init__(self):
+        super().__init__()
+
+    @property
+    def _base_name(self):
+        return 'HOME'
+
+    def customize_content(self):
         return '''        <div class="container">
             <div class="page-header">
                 <h2> Home </h2>

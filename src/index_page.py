@@ -1,12 +1,16 @@
 from base_page import BasePage
 
 class IndexPage(BasePage):
-    _base_name = 'INDEX'
-    _extra_dict = {
-            'BACKGROUND_CLASS': 'index-full',
-            'PADDING': '0',
-    }
+    def __init__(self):
+        super().__init__()
+        self._extra_dict = {
+                'BACKGROUND_CLASS': 'index-full',
+                'PADDING': '0',
+        }
 
-    @classmethod
-    def customize_content(cls):
+    @property
+    def _base_name(self):
+        return 'INDEX'
+
+    def customize_content(self):
         return ''

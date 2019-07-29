@@ -30,9 +30,9 @@
                 <div class="collapse navbar-collapse show"  id="navbarNavDropdown">
                     <ul class="nav navbar-nav ml-auto nav-tabs">
                         <li class="nav-item"><a class="nav-link" href="home.html">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="blog.html">BLOG</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">BLOG</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle disable" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <a class="dropdown-item" href="project_undergrad.html">Undergrad Project</a>
                                 <a class="dropdown-item" href="project_graduate.html">Graduate Project</a>
@@ -44,10 +44,21 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-
-        <div class="container">
+         <div class="container">
             <div class="page-header">
                 <h2> Blog </h2>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4> End of 2017 and my student life </h4>
+                    <h5><i> Some my reflections in 2017 and expectations in 2018 </i></h5>
+                    <p> It has been a long time since my last diary. I remember a did have two reflection articles for my first and second quarters written. However, by the end of third quarter, I started to record everything through video in order to practice my oral skills. Now is about time to pick up writing ...
+                        <a href="article-pages/article_474c3853fb5b85237572d3feb61fc87a.html"> (Read More) </a>
+                    </p>
+                </div>
             </div>
 
             <hr>
@@ -68,20 +79,8 @@
                 <div class="col-md-12">
                     <h4> Road Trip + Commencement + Thoughts </h4>
                     <h5><i> Turning point of my life: graudated from being a student </i></h5>
-                    <p> It has been four days since my graduation, but I just couldn't find time to manage pictures I took or write down any word about my thoughts until now. Despite the fact that I am still not fully recovered from the tiredness accumulated during nine-day road trip and would like to fall asleep...
+                    <p> It has been four days since my graduation, but I just couldn’t find time to manage pictures I took or write down any word about my thoughts until now. Despite the fact that I am still not fully recovered from the tiredness accumulated during nine-day road trip and would like to fall asleep...
                         <a href="article-pages/article_4777ab4621d179dfe34205ee6f7f29e1.html"> (Read More) </a>
-                    </p>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <h4> End of 2017 and my student life </h4>
-                    <h5><i> Some my reflections in 2017 and expectations in 2018 </i></h5>
-                    <p> It has been a long time since my last diary. I remember a did have two reflection articles for my first and second quarters written. However, by the end of third quarter, I started to record everything through video in order to practice my oral skills. Now is about time to pick up writing ...
-                        <a href="article-pages/article_474c3853fb5b85237572d3feb61fc87a.html"> (Read More) </a>
                     </p>
                 </div>
             </div>
@@ -92,7 +91,7 @@
                 <div class="col-md-12">
                     <h4> Some my ideas about cryptocurrency </h4>
                     <h5><i> Should we expect the bubble crash from cryptocurrency or not? </i></h5>
-                    <p> I neither am an expert in economics nor have much understanding in cryptocurrency. I write this post simply because I am curious about the &quot;reason&quot; behind buying cryptocurrency. In the following statements, I am sure there would be many obvious mistakes. If you are also intereste...
+                    <p> I neither am an expert in economics nor have much understanding in cryptocurrency. I write this post simply because I am curious about the “reason” behind buying cryptocurrency. In the following statements, I am sure there would be many obvious mistakes. If you are also interested in this ...
                         <a href="article-pages/article_7cf1e74564545d50f9a5c450e84cb850.html"> (Read More) </a>
                     </p>
                 </div>
@@ -111,7 +110,7 @@
         <script>
             $(window).bind("load", function() {
                 $.getScript('src/js/social.js', function() {});
-                $.getScript('src/js/analytics.js', function() {});
+                $.getScript('src/js/analytics.js', function() { gapi.load('client', initClient); });
             });
         </script>
     </body>

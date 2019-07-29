@@ -5,39 +5,43 @@ from base_page import BasePage
 
 
 class ResearchPage(BasePage):
-    _base_name = 'RESEARCH'
-    _folder = 'research'
-    _sub_folders = [
-            {
-                'name': 'Accepted Papers',
-                'report_link_enabled': True,
-            },
-            {
-                'name': 'Pending Papers (details hidden)',
-                'report_link_enabled': False,
-            },
-            {
-                'name': 'Unsubmitted Works',
-                'report_link_enabled': True,
-            },
-    ]
+    def __init__(self):
+        super().__init__()
+        self._folder = 'research'
+        self._sub_folders = [
+                {
+                    'name': 'Accepted Papers',
+                    'report_link_enabled': True,
+                },
+                {
+                    'name': 'Pending Papers (details hidden)',
+                    'report_link_enabled': False,
+                },
+                {
+                    'name': 'Unsubmitted Works',
+                    'report_link_enabled': True,
+                },
+        ]
 
-    @classmethod
-    def customize_content(cls):
+    @property
+    def _base_name(self):
+        return 'RESEARCH'
+
+    def customize_content(self):
         s = '''        <div class="container">
             <div class="page-header">
                 <h2> Research </h2>
             </div>
 '''
 
-        for sub_folder_info in cls._sub_folders:
+        for sub_folder_info in self._sub_folders:
             sub_folder = sub_folder_info['name']
             report_link = sub_folder_info['report_link_enabled']
 
-            if not os.path.exists(os.path.join(cls._folder, sub_folder)):
+            if not os.path.exists(os.path.join(self._folder, sub_folder)):
                 continue
 
-            folder_names = os.listdir(os.path.join(cls._folder, sub_folder))
+            folder_names = os.listdir(os.path.join(self._folder, sub_folder))
             folder_names = [x for x in folder_names if x[0] != '.']
 
             s += '''            <div class="row">
@@ -50,7 +54,7 @@ class ResearchPage(BasePage):
 '''
 
             for idx, folder_name in enumerate(folder_names):
-                proj_name = os.path.join(cls._folder, sub_folder, folder_name)
+                proj_name = os.path.join(self._folder, sub_folder, folder_name)
                 file_names = os.listdir(proj_name)
                 file_names = [x for x in file_names if x[0] != '.']
 
