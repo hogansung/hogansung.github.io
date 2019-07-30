@@ -1,13 +1,12 @@
 import os
 import pathlib
 
-from base_page import BasePage
+from thumbnail_page import ThumbnailPage
 
 
-class ResearchPage(BasePage):
+class ResearchPage(ThumbnailPage):
     def __init__(self):
         super().__init__()
-        self._folder = 'research'
         self._sub_folders = [
                 {
                     'name': 'Accepted Papers',
@@ -26,6 +25,14 @@ class ResearchPage(BasePage):
     @property
     def _base_name(self):
         return 'RESEARCH'
+
+    @property
+    def _folder(self):
+        return 'research'
+
+    @property
+    def _ratio(self):
+        return 1.0
 
     def customize_content(self):
         s = '''        <div class="container">

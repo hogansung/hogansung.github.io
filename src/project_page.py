@@ -1,21 +1,17 @@
 import os
 import pathlib
 
-from abc import ABCMeta, abstractproperty
+from abc import abstractproperty
 
-from base_page import BasePage
+from thumbnail_page import ThumbnailPage
 
 
-class ProjectPage(BasePage, metaclass=ABCMeta):
+class ProjectPage(ThumbnailPage):
     def __init__(self):
         super().__init__()
         self.default_readme = 'project/template/readme.txt'
         self.default_image = 'project/template/catch.png'
         self.default_report = 'project/template/report.pdf'
-
-    @abstractproperty
-    def _folder(self):
-        pass
 
     @abstractproperty
     def _sub_folders(self):
@@ -162,6 +158,10 @@ class ProjectGraduatePage(ProjectPage):
         return 'project/graduate'
 
     @property
+    def _ratio(self):
+        return 0.6
+
+    @property
     def _sub_folders(self):
         return ['Fall (2016)', 'Winter (2016)', 'Spring (2016)', 'Fall (2017)']
 
@@ -181,6 +181,10 @@ class ProjectUnderGradPage(ProjectPage):
     @property
     def _folder(self):
         return 'project/undergrad'
+
+    @property
+    def _ratio(self):
+        return 0.6
 
     @property
     def _sub_folders(self):

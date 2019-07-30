@@ -1,3 +1,4 @@
 ### Requirements
-1. imagemagick@6 (brew install imagemagick@6)
-2. Wand (pip install Wand)
+1. Wand (pip install Wand)
+2. imagemagick (brew install imagemagick)
+3. ghostscript (brew install ghostscript)
