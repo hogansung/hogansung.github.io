@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en" class="{BACKGROUND_CLASS}">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+{FACEBOOK_MODERATION}
+        <!-- Bootstrap core CSS -->
+        <link href="{REV_PAGE_FOLDER_PREFIX}{REV_ARTICLE_FOLDER_PREFIX}src/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Bootstrap social CSS -->
+        <link href="{REV_PAGE_FOLDER_PREFIX}{REV_ARTICLE_FOLDER_PREFIX}src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+        <link href="{REV_PAGE_FOLDER_PREFIX}{REV_ARTICLE_FOLDER_PREFIX}src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+
+        <!-- Manual CSS -->
+        <link href="{REV_PAGE_FOLDER_PREFIX}{REV_ARTICLE_FOLDER_PREFIX}src/css/manual.css" rel="stylesheet">
+    </head>
+
+    <body style="padding:{PADDING}px; background-color: rgba(240, 250, 240, 0.3)">
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-default bg-dark">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{REV_ARTICLE_FOLDER_PREFIX}{INDEX_URL}">Hao-en Sung (Hogan)</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse show"  id="navbarNavDropdown">
+                    <ul class="nav navbar-nav ml-auto nav-tabs">
+                        <li class="nav-item"><a class="{HOME_LINK}" href="{REV_ARTICLE_FOLDER_PREFIX}{HOME_URL}">HOME</a></li>
+                        <li class="nav-item"><a class="{BLOG_LINK}" href="{REV_ARTICLE_FOLDER_PREFIX}{BLOG_URL}">BLOG</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">PROJECT<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <a class="{PROJECT_UNDERGRAD_LINK}" href="{REV_ARTICLE_FOLDER_PREFIX}{PROJECT_UNDERGRAD_URL}">Undergrad Project</a>
+                                <a class="{PROJECT_GRADUATE_LINK}" href="{REV_ARTICLE_FOLDER_PREFIX}{PROJECT_GRADUATE_URL}">Graduate Project</a>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="{RESEARCH_LINK}" href="{REV_ARTICLE_FOLDER_PREFIX}{RESEARCH_URL}">RESEARCH</a></li>
+                        <li class="nav-item"><a class="{ABOUT_LINK}" href="{REV_ARTICLE_FOLDER_PREFIX}{ABOUT_URL}">ABOUT</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
