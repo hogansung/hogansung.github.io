@@ -8,14 +8,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Bootstrap core CSS -->
-        <link href="src/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="../src/bootstrap/css/bootstrap.css" rel="stylesheet">
 
         <!-- Bootstrap social CSS -->
-        <link href="src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
-        <link href="src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+        <link href="../src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+        <link href="../src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
 
         <!-- Manual CSS -->
-        <link href="src/css/manual.css" rel="stylesheet">
+        <link href="../src/css/manual.css" rel="stylesheet">
     </head>
 
     <body style="padding:100px; background-color: rgba(240, 250, 240, 0.3)">
@@ -153,15 +153,15 @@
 
         <!-- Bootstrap core JavaScript -->
         <script src="https://code.jquery.com/jquery.min.js"></script>
-        <script src="src/bootstrap/js/bootstrap.js"></script>
+        <script src="../src/bootstrap/js/bootstrap.js"></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src='https://www.google-analytics.com/analytics.js'></script>
         <script async src="https://apis.google.com/js/api.js"></script>
         <script>
             $(window).bind("load", function() {
-                $.getScript('src/js/social.js', function() {});
-                $.getScript('src/js/analytics.js', function() { gapi.load('client', initClient); });
+                $.getScript('../src/js/social.js', function() {});
+                $.getScript('../src/js/analytics.js', function() { gapi.load('client', initClient); });
             });
         </script>
     </body>

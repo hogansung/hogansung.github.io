@@ -96,10 +96,10 @@ class ResearchPage(ThumbnailPage):
 
                 # hack: get relative location
                 report_p = pathlib.Path(report_path)
-                rel_report_path = str(pathlib.Path(*report_p.parts))
+                rel_report_path = os.path.join(self._dict['REV_PAGE_FOLDER_PREFIX'], str(pathlib.Path(*report_p.parts)))
 
                 image_p = pathlib.Path(image_path)
-                rel_image_path = str(pathlib.Path(*image_p.parts))
+                rel_image_path = os.path.join(self._dict['REV_PAGE_FOLDER_PREFIX'], str(pathlib.Path(*image_p.parts)))
 
                 # hack: deal with media
                 medias = [x for x in file_names if x.find('video') >= 0]

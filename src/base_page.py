@@ -1,7 +1,10 @@
+import os
+
 from abc import ABCMeta, abstractproperty
 
 
 class BasePage(object, metaclass=ABCMeta):
+
     def __init__(self):
         self._dict = {
                 'BACKGROUND_CLASS': 'normal-full',
@@ -20,7 +23,9 @@ class BasePage(object, metaclass=ABCMeta):
                 'PROJECT_GRADUATE_LINK': 'dropdown-item',
                 'RESEARCH_LINK': 'nav-link',
                 'ABOUT_LINK': 'nav-link',
-                'PATH_PREFIX': '',
+                'REV_ARTICLE_FOLDER_PREFIX': '',
+                'PAGE_FOLDER_PREFIX': 'pages/',
+                'REV_PAGE_FOLDER_PREFIX': '../',
         }
         self._extra_dict = {}
 
@@ -41,12 +46,12 @@ class BasePage(object, metaclass=ABCMeta):
         self._dc_dict.update(self._extra_dict)
 
     def fetch_prefix_template(self):
-        with open('template/prefix.txt') as f:
+        with open('html_template/prefix.txt') as f:
             lines = f.readlines()
         return ''.join(lines)
 
     def fetch_suffix_template(self):
-        with open('template/suffix.txt') as f:
+        with open('html_template/suffix.txt') as f:
             lines = f.readlines()
         return ''.join(lines)
 
@@ -70,7 +75,7 @@ class BasePage(object, metaclass=ABCMeta):
 
     def run(self):
         self._update_dict()
-        file_name = self._base_name.lower() + '.html'
+        file_name = os.path.join(self._dict['PAGE_FOLDER_PREFIX'], self._base_name.lower() + '.html')
         with open(file_name, 'w') as f:
             f.write(self.render())
 

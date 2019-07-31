@@ -42,7 +42,7 @@ class ArticlePage(BasePage):
         <meta property="og:site_name" content="Hogan's Personal Website"/>
 
 '''.format(URL=self.url, TITLE=self.title, SUB_TITLE=self.sub_title),
-            'PATH_PREFIX': '../',
+            'REV_ARTICLE_FOLDER_PREFIX': '../',
         }
 
     @property
