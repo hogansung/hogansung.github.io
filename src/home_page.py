@@ -98,21 +98,10 @@ class HomePage(BasePage):
                     <p> Version 2.6.0 (2018-01-13): add readmes for Undergrad/Senior, Graduate/Fall (2016), and Graduate/Winter (2016)</p>
                     <p> Version 2.7.0 (2018-01-16): add readmes for Graduate/Spring (2016), Graduate/Fall (2017), and Research; update home.html </p>
                     <p> Version 3.0.0 (2019-04-17): bump up Bootstrap version to 4.3.1; migrate pyfiles to Python 3; update all page stylings; update themes </p>
-
-                    <hr>
-
-                    <h3> Number of visits (since 2018/01/01) </h3>
-                    <br>
-                    <div align="left">
-                        <span id='d5' class='visit_count'>0</span>
-                        <span id='d4' class='visit_count'>0</span>
-                        <span id='d3' class='visit_count'>0</span>
-                        <span id='d2' class='visit_count'>0</span>
-                        <span id='d1' class='visit_count'>0</span>
-                        <span id='d0' class='visit_count'>0</span>
-                    </div>
-                <div class="col-md-12">
+                </div>
             </div>
+
+            <div id="visitor_counter"></div>
 
             <hr>
         </div>'''

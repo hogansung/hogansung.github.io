@@ -2,16 +2,19 @@
 
         <!-- Bootstrap core JavaScript -->
         <script src="https://code.jquery.com/jquery.min.js"></script>
-        <script src="{REV_PAGE_FOLDER_PREFIX}{REV_ARTICLE_FOLDER_PREFIX}src/bootstrap/js/bootstrap.js"></script>
+        <script src="{REV_ARTICLE_FOLDER_PREFIX}bootstrap/js/bootstrap.js"></script>
+        <script src="{REV_ARTICLE_FOLDER_PREFIX}js/visitor_counter_show.js"></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!--
         <script async src='https://www.google-analytics.com/analytics.js'></script>
         <script async src="https://apis.google.com/js/api.js"></script>
         <script>
             $(window).bind("load", function() {{
-                $.getScript('{REV_PAGE_FOLDER_PREFIX}{REV_ARTICLE_FOLDER_PREFIX}src/js/social.js', function() {{}});
-                $.getScript('{REV_PAGE_FOLDER_PREFIX}{REV_ARTICLE_FOLDER_PREFIX}src/js/analytics.js', function() {{ gapi.load('client', initClient); }});
+                $.getScript('{REV_ARTICLE_FOLDER_PREFIX}js/social.js', function() {{}});
+                $.getScript('{REV_ARTICLE_FOLDER_PREFIX}js/analytics.js', function() {{ gapi.load('client', initClient); }});
             }});
         </script>
+        -->
     </body>
 </html>

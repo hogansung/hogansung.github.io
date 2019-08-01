@@ -24,7 +24,7 @@ class BasePage(object, metaclass=ABCMeta):
                 'RESEARCH_LINK': 'nav-link',
                 'ABOUT_LINK': 'nav-link',
                 'REV_ARTICLE_FOLDER_PREFIX': '',
-                'PAGE_FOLDER_PREFIX': 'pages/',
+                'PAGE_FOLDER_PREFIX': 'html_pages/',
                 'REV_PAGE_FOLDER_PREFIX': '../',
         }
         self._extra_dict = {}
@@ -46,12 +46,12 @@ class BasePage(object, metaclass=ABCMeta):
         self._dc_dict.update(self._extra_dict)
 
     def fetch_prefix_template(self):
-        with open('html_template/prefix.txt') as f:
+        with open('html_templates/prefix.txt') as f:
             lines = f.readlines()
         return ''.join(lines)
 
     def fetch_suffix_template(self):
-        with open('html_template/suffix.txt') as f:
+        with open('html_templates/suffix.txt') as f:
             lines = f.readlines()
         return ''.join(lines)
 

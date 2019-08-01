@@ -28,6 +28,9 @@ def exec(args):
         research_page.generate_thumbnail()
         print('Regenerate thumbnails for project and research pages')
 
+    if any(vars(args).values()) == False:
+        args.all = True
+
     if args.about or args.all:
         about_page.run()
         print('About page is generated')

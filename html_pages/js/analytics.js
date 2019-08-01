@@ -1,16 +1,16 @@
 /* Google Analyitcs API */
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-112083134-1', 'auto');
+ga('create', 'UA-112083134-2', 'auto');
 ga('send', 'pageview');
 
 
 /* Google Analytics Retrieve Data */
 function initClient() {
     gapi.client.init({
-        'apiKey': "AIzaSyBkTPfX55NRxmd9pZVNhs2yT-1fE75litE",
+        'apiKey': "AIzaSyBmnQ62un-WZqpYaLbW32EBW7E6J7vFX-s",
         // clientId and scope are optional if auth is not required.
-        'client_id': "247748488144-snvkg0rq81f293cuo70itn4iu9lhlnf8.apps.googleusercontent.com",
-        'scope': 'profile',
+        'client_id': "247748488144-8fnt0j1dts299u7stmh3hbk8l0jcln7f.apps.googleusercontent.com",
+        'scope': 'https://www.googleapis.com/auth/analytics.readonly',
     }).then(function() {
         gapi.client.request({
             path: '/v4/reports:batchGet',
@@ -19,7 +19,7 @@ function initClient() {
             body: {
                 reportRequests: [
                     {
-                        viewId: '167398842',
+                        viewId: '193833568',
                         dateRanges: [
                             {
                                 startDate: '7daysAgo',
