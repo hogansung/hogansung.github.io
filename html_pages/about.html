@@ -17,6 +17,7 @@
         <!-- Manual CSS -->
         <link rel="import" href="/visitor_counter.html">
         <link href="/src/css/manual.css" rel="stylesheet">
+        <link rel="shortcut icon" href="">
     </head>
 
     <body style="padding:100px; background-color: rgba(240, 250, 240, 0.3)">
@@ -376,6 +377,13 @@
         <script src="/src/bootstrap/js/bootstrap.js"></script>
         <script src="/src/js/visitor_counter_show.js"></script>
         <script src="/src/js/visitor_counter_update.js"></script>
+
+        <!-- Facebook -->
+        <script>
+            $(window).bind("load", function() {
+                $.getScript('/src/js/social.js', function() {});
+            });
+        </script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <!--

@@ -17,6 +17,7 @@
         <!-- Manual CSS -->
         <link rel="import" href="/visitor_counter.html">
         <link href="/src/css/manual.css" rel="stylesheet">
+        <link rel="shortcut icon" href="">
     </head>
 
     <body style="padding:{PADDING}px; background-color: rgba(240, 250, 240, 0.3)">

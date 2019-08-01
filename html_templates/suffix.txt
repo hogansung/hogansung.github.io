@@ -6,6 +6,13 @@
         <script src="/src/js/visitor_counter_show.js"></script>
         <script src="/src/js/visitor_counter_update.js"></script>
 
+        <!-- Facebook -->
+        <script>
+            $(window).bind("load", function() {{
+                $.getScript('/src/js/social.js', function() {{}});
+            }});
+        </script>
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <!--
         <script async src='https://www.google-analytics.com/analytics.js'></script>
