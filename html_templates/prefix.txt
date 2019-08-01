@@ -8,15 +8,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 {FACEBOOK_MODERATION}
         <!-- Bootstrap core CSS -->
-        <link href="{REV_ARTICLE_FOLDER_PREFIX}bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/src/bootstrap/css/bootstrap.css" rel="stylesheet">
 
         <!-- Bootstrap social CSS -->
-        <link href="{REV_ARTICLE_FOLDER_PREFIX}bootstrap-social/bootstrap-social.css" rel="stylesheet">
-        <link href="{REV_ARTICLE_FOLDER_PREFIX}bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
+        <link href="/src/bootstrap-social/bootstrap-social.css" rel="stylesheet">
+        <link href="/src/bootstrap-social/assets/css/font-awesome.css" rel="stylesheet">
 
         <!-- Manual CSS -->
-        <link href="{REV_ARTICLE_FOLDER_PREFIX}css/manual.css" rel="stylesheet">
-        <link href="{REV_ARTICLE_FOLDER_PREFIX}css/manual.css" rel="stylesheet">
+        <link rel="import" href="/visitor_counter.html">
+        <link href="/src/css/manual.css" rel="stylesheet">
     </head>
 
     <body style="padding:{PADDING}px; background-color: rgba(240, 250, 240, 0.3)">
