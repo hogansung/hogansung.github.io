@@ -8,7 +8,8 @@ $(window).load(function(){
                 total_number_visit = Math.floor(total_number_visit / 10);
             }
         };
-        oReq.open('get', '/src/php/visitor_counter_show.php', true);
+        //oReq.open('get', '/src/php/visitor_counter_show.php', true);
+        oReq.open('get', '/src/php/google_analytics.php', true);
         oReq.send();
     });
 });
